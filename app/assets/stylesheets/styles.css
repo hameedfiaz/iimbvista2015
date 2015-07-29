@@ -737,6 +737,35 @@ Features Slider
     margin: 0 12px 0 0;
 }
 
+.white-on-orange {
+    background-color: #C06E37
+}
+
+.white-on-orange h1 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+}
+.white-on-orange p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.orange-on-white {
+    background-color: #fff
+}
+
+.orange-on-white h1 {
+    margin-bottom: 15px;
+    color: #C06E37;
+    font-weight: 400;
+    font-size: 22px;
+}
+.orange-on-white p {
+    color: #C06E37;
+    font-size: 14px;
+}
 /* ==========================================================================
 Speakers Slider
 ========================================================================== */
