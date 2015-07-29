@@ -1,4 +1,5 @@
 ---
+fontawesome-webfont.ttf: fontawesome-webfont-2c1ff1e84875e92a073d3ef23c886b1b.ttf
 img/01-screenshot.jpg: img/01-screenshot-3696c194515cb983a52ada6c1097f928.jpg
 img/02-screenshot.jpg: img/02-screenshot-b1a1744c31856242cd7e8850cc79dc88.jpg
 img/03-screenshot.jpg: img/03-screenshot-b317c0bcb3bbc7a0799bb0884bffff31.jpg
@@ -34,6 +35,7 @@ img/home-iimb-logo.png: img/home-iimb-logo-b406b5162cd951e128f8f89b21597a6b.png
 img/html5-logo.png: img/html5-logo-d97df15e8714d736791a967a9af926c6.png
 img/html5-logo@2x.png: img/html5-logo@2x-eafb59bd87d8eb98f926eaa5ceb33702.png
 img/iimb-01.jpg: img/iimb-01-670232dbae0bcde45c2e48bb24754d2f.jpg
+img/indigenous-home.png: img/indigenous-home-f6e7330faeb416f8b0805b0bc9ff7add.png
 img/iphone-skeleton.png: img/iphone-skeleton-cb959f308fdfb9507a772a0a1c4b6725.png
 img/large/01.jpg: img/large/01-91534bd89eaec46a6774492c5e361b1d.jpg
 img/large/02.jpg: img/large/02-5374dd35498ec5002567b6ab00c3697f.jpg
@@ -54,8 +56,14 @@ img/screen3.jpg: img/screen3-c3195eae51fd11d1e99e619e48c334dc.jpg
 img/showcase-bg-fixed-01.jpg: img/showcase-bg-fixed-01-a8e8e54f1bddcafac348580377dee25d.jpg
 img/showcase-bg-fixed.jpg: img/showcase-bg-fixed-bbf48baa3754b87a540f41d2a7f652cc.jpg
 img/showcase-bg.jpg: img/showcase-bg-442027314f4ab6b1ffa387a085ce86dd.jpg
-img/vista-logo.jpg: img/vista-logo-13d5eb5d3ed5b2fa709682149c45d2a0.jpg
+img/vista-2015-logo.gif: img/vista-2015-logo-869ced82b20746ba8e445ed83b114166.gif
+img/vista-2015-logo.jpg: img/vista-2015-logo-cd5af49e50bac4c027b3190225eeab70.jpg
+img/vista-text.png: img/vista-text-91dcd8a4f08c58620dddb41b47042d79.png
 rails.png: rails-e603c5565b20ca95eb2744b3fed71fcc.png
-application.js: application-d0dd0d5ccd68a11993892e46bc24b2a6.js
-application.css: application-58174394bc219c97171a259148a5c718.css
+slider/example-slide-1.jpg: slider/example-slide-1-851429e3aa20cfa22538c90c964d0a5d.jpg
+slider/example-slide-2.jpg: slider/example-slide-2-7f269633b6b418db0e625f44fa73b649.jpg
+slider/example-slide-3.jpg: slider/example-slide-3-90dbde6e90ba1e5670600a1a0ea715dd.jpg
+slider/example-slide-4.jpg: slider/example-slide-4-7a818ffddb3078c3ef6cca13e07146fc.jpg
+application.js: application-fc9814b99e30f5cf265b723149a65ab9.js
+application.css: application-aef4a361c9d486a372d62f905ace5c25.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map

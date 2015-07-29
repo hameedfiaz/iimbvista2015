@@ -25,10 +25,12 @@ $(document).ready(function() {
 
 	/***************** Flickity ******************/
 
-	$('#featuresSlider').flickity({
+	$('#speakersSlider').flickity({
 		cellAlign: 'left',
 		contain: true,
-		prevNextButtons: false
+		prevNextButtons: false,
+		imagesLoaded: true,
+		autoPlay: 3000
 	});
 
 	$('#showcaseSlider').flickity({

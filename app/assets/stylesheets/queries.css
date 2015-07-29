@@ -10,6 +10,7 @@
 	.screenshots-intro{padding:110px 0 100px 0;}
 	.feature-content{width:80%;}
 	.features-slider{height:100%}
+	.speakers-slider{height:100%}
 }
 @media screen and (max-width:680px){
 	.feature-content{width:60%;}
@@ -31,4 +32,5 @@
 	.feature-icon{display:block;margin:0 auto;}
 	blockquote p{width:60%;}
 	.features-slider {padding: 11% 50px 10% 50px;}
+	.speakers-slider {padding: 11% 50px 10% 50px;}
 }

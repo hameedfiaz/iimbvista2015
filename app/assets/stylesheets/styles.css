@@ -589,8 +589,8 @@ Navigation
 }
 .navicon-fixed {
     position: fixed;
-    top: 59px;
-    right: 143px;
+    top: 10%;
+    right: 2%;
 }
 
 /* ==========================================================================
@@ -625,6 +625,17 @@ header i {
     margin-left: 5px
 }
 
+.main-banner {
+    max-width: 60%;
+    padding-top: 5%;
+    padding-bottom: 5%;  
+}
+
+.small-banner {
+     max-width: 60%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
 /* ==========================================================================
 Video
 ========================================================================== */
@@ -727,6 +738,61 @@ Features Slider
 }
 
 /* ==========================================================================
+Speakers Slider
+========================================================================== */
+.speakers-bg {
+    position: relative;
+    min-height: 400px;
+    background: url('../assets/img/features-intro-01.jpg') no-repeat center center;
+    background-size: cover;
+}
+.speakers-img {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    line-height: 400px;
+}
+.speakers-slider {
+    position: relative;
+    padding: 11% 100px 10% 100px;
+    height: 400px;
+    background-color: #C06E37;
+}
+.speakers-slider ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.speakers-slider ul li {
+    width: 100%;
+}
+.speakers-slider li h1 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+}
+.speakers-slider li p {
+    color: #fff;
+    font-size: 14px;
+}
+.speakers-intro-img {
+    position: relative
+}
+.slides li h1 {
+    margin: 0;
+    padding: 0;
+}
+.speakers-slider .flickity-page-dots {
+    text-align: left;
+    margin-top: 50px;
+    position: static;
+}
+.speakers-slider .flickity-page-dots .dot {
+    margin: 0 12px 0 0;
+}
+
+/* ==========================================================================
 Features List
 ========================================================================== */
 .features-list {
@@ -735,12 +801,12 @@ Features List
 .features-list h1 {
     margin: 0 0 10px 0;
     padding: 0;
-    color: #24374b;
+    color: #4A3524;
     font-size: 20px;
 }
 .features-list p {
     margin-bottom: 20px;
-    color: #778899;
+    color: #9A8A78;
 }
 .feature-content {
     display: inline-block;
@@ -752,7 +818,7 @@ Features List
     margin-right: 25px;
     width: 90px;
     height: 90px;
-    border: solid 2px #4e9ba3;
+    border: solid 2px #B26836;
     border-radius: 50%;
     vertical-align: top;
     text-align: center;
@@ -760,7 +826,7 @@ Features List
     line-height: 90px;
 }
 .feature-icon i {
-    color: #4e9ba3
+    color: #B26836
 }
 
 /* ==========================================================================
@@ -851,13 +917,13 @@ Screenshots Intro
 }
 .screenshots-intro h1 {
     margin-bottom: 20px;
-    color: #24374b;
+    color: #4A3524;
     font-weight: 400;
     font-size: 22px;
 }
 .screenshots-intro p {
     margin-bottom: 25px;
-    color: #778899;
+    color: #9A8A78;
 }
 
 /* ==========================================================================
@@ -960,6 +1026,9 @@ Download Now
     font-size: 40px;
 }
 
+.sponsors-intro {
+    margin-top: 10%;
+}
 /* ==========================================================================
 Footer
 ========================================================================== */

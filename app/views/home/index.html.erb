@@ -8,18 +8,20 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Boxify: Free HTML5/CSS3 Template by Peter Finlan</title>
+		<title>VISTA '15 - Get Indigenous</title>
 		<meta name="description" content="A free HTML5/CSS3 template made exclusively for Codrops by Peter Finlan" />
 		<meta name="keywords" content="html5 template, css3, one page, animations, agency, portfolio, web design" />
-		<meta name="author" content="Peter Finlan" />
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+  		<%= javascript_include_tag "application" %>
+
 		<!-- Bootstrap -->
 		<script src="assets/modernizr.custom.js"></script>
 		<link href="assets/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/jquery.fancybox.css" rel="stylesheet">
 		<link href="assets/flickity.css" rel="stylesheet" >
 		<link href="assets/animate.css" rel="stylesheet">
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+		<!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+		<!-- <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'> -->
 		<link href="assets/styles.css" rel="stylesheet">
 		<link href="assets/queries.css" rel="stylesheet">
 		<!-- Facebook and Twitter integration -->
@@ -32,6 +34,14 @@
 		<meta name="twitter:image" content="" />
 		<meta name="twitter:url" content="" />
 		<meta name="twitter:card" content="" />
+		<script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>   
+		<script type="text/javascript" src="assets/jquery.slides.js"></script>   
+
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+		<script type="text/javascript" src="assets/jquery.simpleslider.js"></script>
+
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -44,23 +54,33 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		<!-- open/close -->
-		<%= render :partial => "hero" %>
+		<%= render :partial => "hero" %> 
 		<%= render :partial => "about" %>
-		<%= render :partial => "small_slider" %>
-		<%= render :partial => "features" %>
-		<%= render :partial => "showcase" %>
+		<%= render :partial => "full_slider" %>
 		<%= render :partial => "sometext" %>
 		<%= render :partial => "screenshots" %>
+		<%= render :partial => "highlights" %>
+		<%= render :partial => "small_slider" %>
+		<%= render :partial => "showcase" %>
+		<%= render :partial => "sponsors" %>
+		<%= render :partial => "register_today" %>
 		<%= render :partial => "home_footer" %>
 		<div class="overlay overlay-boxify">
 			<nav>
 				<ul>
-					<li><a href="#about"><i class="fa fa-heart"></i>About</a></li>
-					<li><a href="#features"><i class="fa fa-flash"></i>Features</a></li>
+					<li><a href="#hero"><i class="fa fa-inr"></i>Get Indi-Genius</a></li>
+					<li><a href="#speakers-intro"><i class="fa fa-users"></i>Speaker Series</a></li>
 				</ul>
 				<ul>
-					<li><a href="#screenshots"><i class="fa fa-desktop"></i>Screenshots</a></li>
-					<li><a href="#download"><i class="fa fa-download"></i>Download</a></li>
+					<li><a href="#screenshots-intro"><i class="fa fa-tasks"></i>Events</a></li>
+					<li><a href="#highlights"><i class="fa fa-trophy"></i>Rewards</a></li>
+				</ul>
+				<ul>
+					<li><a href="#features-intro"><i class="fa fa-graduation-cap"></i>About Us</a></li>
+					<li><a href="#showcase"><i class="fa fa-download"></i>Download</a></li>
+				</ul>
+				<ul>
+					<li><a href="#sponsors-intro"><i class="fa fa-university"></i>Sponsors</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -82,6 +102,9 @@
 		e.src='//www.google-analytics.com/analytics.js';
 		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 		ga('create','UA-XXXXX-X');ga('send','pageview');
+		$(document).ready(function(){
+    $(".slider").simpleSlider();
+});
 		</script>
 	</body>
 </html>
