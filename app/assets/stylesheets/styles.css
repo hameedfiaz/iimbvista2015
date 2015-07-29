@@ -766,60 +766,6 @@ Features Slider
     color: #C06E37;
     font-size: 14px;
 }
-/* ==========================================================================
-Speakers Slider
-========================================================================== */
-.speakers-bg {
-    position: relative;
-    min-height: 400px;
-    background: url('../assets/img/features-intro-01.jpg') no-repeat center center;
-    background-size: cover;
-}
-.speakers-img {
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    line-height: 400px;
-}
-.speakers-slider {
-    position: relative;
-    padding: 11% 100px 10% 100px;
-    height: 400px;
-    background-color: #C06E37;
-}
-.speakers-slider ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.speakers-slider ul li {
-    width: 100%;
-}
-.speakers-slider li h1 {
-    margin-bottom: 15px;
-    color: #fff;
-    font-weight: 400;
-    font-size: 22px;
-}
-.speakers-slider li p {
-    color: #fff;
-    font-size: 14px;
-}
-.speakers-intro-img {
-    position: relative
-}
-.slides li h1 {
-    margin: 0;
-    padding: 0;
-}
-.speakers-slider .flickity-page-dots {
-    text-align: left;
-    margin-top: 50px;
-    position: static;
-}
-.speakers-slider .flickity-page-dots .dot {
-    margin: 0 12px 0 0;
-}
 
 /* ==========================================================================
 Features List
