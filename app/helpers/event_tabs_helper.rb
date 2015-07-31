@@ -1,0 +1,2 @@
+module EventTabsHelper
+end

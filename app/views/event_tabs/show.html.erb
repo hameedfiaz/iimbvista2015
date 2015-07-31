@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @event_tab.event_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @event_tab.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @event_tab.description %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @event_tab.active %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @event_tab.rank %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_tab_path(@event_tab) %> |
+<%= link_to 'Back', event_tabs_path %>

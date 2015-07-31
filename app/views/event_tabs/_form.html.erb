@@ -1,0 +1,37 @@
+<%= form_for(@event_tab) do |f| %>
+  <% if @event_tab.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event_tab.errors.count, "error") %> prohibited this event_tab from being saved:</h2>
+
+      <ul>
+      <% @event_tab.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event_id %><br />
+    <%= select_tag "event_tab[event_id]", options_from_collection_for_select(@events, 'id', 'title') %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br />
+    <%= f.number_field :rank %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,15 +11,59 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150730100801) do
+ActiveRecord::Schema.define(:version => 20150730132352) do
+
+  create_table "event_categories", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "active",      :default => true
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  create_table "event_categories_users", :id => false, :force => true do |t|
+    t.integer "event_category_id"
+    t.integer "user_id"
+  end
+
+  create_table "event_tabs", :force => true do |t|
+    t.integer  "event_id"
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "active",      :default => true
+    t.integer  "rank",        :default => 0
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.integer  "event_category_id"
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "online_registration", :default => true
+    t.boolean  "active",              :default => true
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+  end
+
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "full_name"
-    t.boolean  "active"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
+    t.boolean  "active",                 :default => true
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
+    t.string   "email",                  :default => "",   :null => false
+    t.string   "encrypted_password",     :default => "",   :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

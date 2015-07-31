@@ -1,0 +1,31 @@
+<h1>Listing event_tabs</h1>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Active</th>
+    <th>Rank</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @event_tabs.each do |event_tab| %>
+  <tr>
+    <td><%= event_tab.event_id %></td>
+    <td><%= event_tab.title %></td>
+    <td><%= event_tab.description %></td>
+    <td><%= event_tab.active %></td>
+    <td><%= event_tab.rank %></td>
+    <td><%= link_to 'Show', event_tab %></td>
+    <td><%= link_to 'Edit', edit_event_tab_path(event_tab) %></td>
+    <td><%= link_to 'Destroy', event_tab, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Event tab', new_event_tab_path %>
