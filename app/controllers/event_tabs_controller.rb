@@ -8,12 +8,13 @@ class EventTabsController < ApplicationController
  end
 
  def index
-  @event_tabs = EventTab.all
+  redirect_to :action => "for_event"
+  # @event_tabs = EventTab.all
 
-  respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @event_tabs }
-    end
+  # respond_to do |format|
+  #     format.html # index.html.erb
+  #     format.json { render json: @event_tabs }
+  #   end
   end
 
   # GET /event_tabs/1

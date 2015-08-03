@@ -1,32 +1,38 @@
 <h1>Listing events</h1>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <% @events.each do |event| %>  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" <%= "href='#collapse#{event.id}'" %> aria-expanded="true" <%= "aria-controls='collapse#{event.id}'" %>>
+          <%= event.title %>
+        </a>
+      </h4>
+    </div>
+    <div <%= "id='collapse#{event.id}'" %> class="panel-collapse collapse" role="tabpanel" <%= "aria-labelledby='heading#{event.id}'" %> >
+      <div class="panel-body">
+        <p><b>Description</b><br/>
+        <%= event.description.html_safe %></p>
+        <p><b>Online Registration</b><br/>
+        <%= event.online_registration %></p>
+        <p><b>Members per team</b><br/>
+        <%= event.per_team %></p>
+        <p><b>Permitted Registrations</b><br/>
+        <%= event.permitted_registrations %></p>
+        <p><b>Registration Fee</b><br/>
+        <%= event.registration_fee %></p>
+        <p><b>Flagship Event</b><br/>
+        <%= event.flagship %></p>
+        <p><b>Active</b><br/>
+        <%= event.active %></p>
+        <p><%= link_to 'Tabs', "/event_tabs/for_event/#{event.id}", class: "btn btn-default" %>
+        <%= link_to 'Show', event, class: "btn btn-default" %>
+        <%= link_to 'Edit', edit_event_path(event), class: "btn btn-default" %>
+        <%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete, class: "btn btn-default" %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
 
-<table>
-  <tr>
-    <th>Event category</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Online registration</th>
-    <th>Active</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @events.each do |event| %>
-  <tr>
-    <td><%= event.event_category_id %></td>
-    <td><%= event.title %></td>
-    <td><%= event.description %></td>
-    <td><%= event.online_registration %></td>
-    <td><%= event.active %></td>
-    <td><%= link_to 'Tabs', "/event_tabs/for_event/#{event.id}" %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'New Event', new_event_path, class: "btn btn-warning" %>

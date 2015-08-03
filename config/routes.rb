@@ -1,19 +1,21 @@
 Iimbvista2015::Application.routes.draw do
+  get "myevents/home"
+
+  get "myevents/information/:id", :controller => "myevents", :action => "information"
+
   resources :event_tabs
 
   resources :events
 
   resources :event_categories
 
-  get "events/for_event_category/:id",:controller => "events", :action => "for_event_category"
+  get "events/for_event_category/:id", :controller => "events", :action => "for_event_category"
   
-  get "event_tabs/for_event/:id",:controller => "event_tabs", :action => "for_event"
+  get "event_tabs/for_event/:id", :controller => "event_tabs", :action => "for_event"
 
   get "events/my_events"
   
   get "backend/index"
-
-  get "backend/myevents"
 
   devise_for :users
 

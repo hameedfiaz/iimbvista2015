@@ -1,6 +1,5 @@
-<h1>Listing event_tabs</h1>
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <% @event_tabs.each do |event_tab| %>  
+  <% @event.event_tabs.each_with_index do |event_tab, i| %>  
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
@@ -11,19 +10,9 @@
     </div>
     <div <%= "id='collapse#{event_tab.id}'" %> class="panel-collapse collapse" role="tabpanel" <%= "aria-labelledby='heading#{event_tab.id}'" %> >
       <div class="panel-body">
-        <p><b>Description</b><br/>
-        <%= event_tab.description.html_safe %></p>
-        <p><b>Ranking</b><br/>
-        <%= event_tab.rank %></p>
-        <p><b>Active</b><br/>
-        <%= event_tab.active %></p>
-        <p><%= link_to 'Show', event_tab, class: "btn btn-default" %>
-        <%= link_to 'Edit', edit_event_tab_path(event_tab), class: "btn btn-default" %>
-        <%= link_to 'Destroy', event_tab, confirm: 'Are you sure?', method: :delete, class: "btn btn-default" %></p>
+        <%= event_tab.description.html_safe %>
       </div>
     </div>
   </div>
   <% end %>
 </div>
-
-<%= link_to 'New Event tab', new_event_tab_path, class: "btn btn-warning" %>

@@ -1,0 +1,12 @@
+<ul id="filter">
+    <li><a class="active" href="#" data-group="all">All</a></li>
+    <% @event_categories.each do |event_category| %>
+        <li><a href="#" <%= "data-group='#{event_category.id}'" %>><%= event_category.title %></a></li>
+    <% end %>
+</ul>
+ 
+<div id="grid">
+    <% @events.each do |event| %>
+        <div class="item blue"  <%= "data-groups='[\"all\",\"#{event.event_category_id}\"]'"%>><%= event.title %></div>
+    <% end %>
+</div>
