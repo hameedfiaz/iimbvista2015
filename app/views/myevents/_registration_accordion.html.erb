@@ -1,0 +1,26 @@
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="headingOne">
+    <h4 class="panel-title">
+      <a role="button" data-toggle="collapse" data-parent="#accordion" <%= "href='#collapseReg#{@event.id}'" %> aria-expanded="true" <%= "aria-controls='collapseReg#{@event.id}'" %>>
+        REGISTRATION
+      </a>
+    </h4>
+  </div>
+  <div <%= "id='collapseReg#{@event.id}'" %> class="panel-collapse collapse" role="tabpanel" <%= "aria-labelledby='headingReg#{@event.id}'" %> >
+    <div class="panel-body">
+      <% if @event.registrations_open? %>
+        <% if user_signed_in? %>
+          <% if @user_registered %>
+            Thank you for REgistering !!! All the Best !
+          <% else %>
+            <%= render :partial => "registration_form" %>
+          <% end %>
+        <% else %>
+          <center><a class="btn btn-warning">Login to Register</a></center>
+        <% end %>
+      <% else %>
+        Oops !!! Registrations have been closed !!!
+      <% end %>
+    </div>
+  </div>
+</div>

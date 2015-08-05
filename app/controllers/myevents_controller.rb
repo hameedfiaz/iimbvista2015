@@ -10,6 +10,7 @@ class MyeventsController < ApplicationController
 		event_id=params[:id]
 		if !!(event_id =~ /\A[-+]?[0-9]+\z/) 
 			@event=Event.find(event_id)
+			@user_registered=@event.user_registered?(current_user)
 		end
 	end
 end

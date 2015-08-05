@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
   has_and_belongs_to_many :event_categories
   has_and_belongs_to_many :events
+  has_and_belongs_to_many :teams
+
 
   def role?(role)
   	return !!self.roles.find_by_name(role.to_s.camelize)

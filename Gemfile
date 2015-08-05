@@ -7,6 +7,7 @@ gem 'rails', '3.2.0'
 
 group :development do
   gem 'mysql2'
+  gem 'debugger'
 end
 
 group :production do

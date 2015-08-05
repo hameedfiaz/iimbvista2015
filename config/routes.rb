@@ -1,4 +1,6 @@
 Iimbvista2015::Application.routes.draw do
+  post "registrations/register"
+
   get "myevents/home"
 
   get "myevents/information/:id", :controller => "myevents", :action => "information"

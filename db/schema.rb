@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150803161228) do
+ActiveRecord::Schema.define(:version => 20150805023805) do
 
   create_table "event_categories", :force => true do |t|
     t.string   "title"
@@ -44,7 +44,9 @@ ActiveRecord::Schema.define(:version => 20150803161228) do
     t.boolean  "active",                  :default => true
     t.datetime "created_at",                                 :null => false
     t.datetime "updated_at",                                 :null => false
-    t.integer  "per_team",                :default => 0
+    t.integer  "min_per_team",            :default => 0
+    t.integer  "max_per_team",            :default => 0
+    t.date     "deadline"
     t.integer  "permitted_registrations", :default => 0
     t.integer  "registration_fee",        :default => 0
     t.boolean  "flagship",                :default => false
@@ -58,6 +60,18 @@ ActiveRecord::Schema.define(:version => 20150803161228) do
 
   create_table "roles_users", :id => false, :force => true do |t|
     t.integer "role_id"
+    t.integer "user_id"
+  end
+
+  create_table "teams", :force => true do |t|
+    t.integer  "event_id"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "teams_users", :id => false, :force => true do |t|
+    t.integer "team_id"
     t.integer "user_id"
   end
 

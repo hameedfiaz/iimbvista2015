@@ -28,8 +28,12 @@
     <%= f.check_box :online_registration %>
   </div>
   <div class="field">
-    <%= f.label :per_team %><br />
-    <%= f.text_field :per_team %>
+    <%= f.label :min_per_team %><br />
+    <%= f.number_field :min_per_team %>
+  </div>
+  <div class="field">
+    <%= f.label :max_per_team %><br />
+    <%= f.number_field :max_per_team %>
   </div>
   <div class="field">
     <%= f.label :registration_fee %><br />
@@ -38,6 +42,10 @@
   <div class="field">
     <%= f.label :permitted_registrations %><br />
     <%= f.text_field :permitted_registrations %>
+  </div>
+  <div class="field">
+    <%= f.label :deadline %><br />
+    <%= f.date_select :deadline %>
   </div>
   <div class="field">
     <%= f.label :flagship %><br />
