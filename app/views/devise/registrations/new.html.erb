@@ -1,5 +1,5 @@
 <h2>Sign up</h2>
-
+<% college_list = College.all.map{|p| [p.name, p.id] } %>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   
@@ -12,6 +12,9 @@
   <div><%= f.label :phone %><br />
   <%= f.text_field :phone %></div>
 
+  <div><%= f.label :college %><br />
+  <%= select_tag "user[college_id]", options_for_select(college_list) %></div>
+
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
 
@@ -22,3 +25,15 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<script src="/assets/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#user__college_id_').change(function() {
+      if( $('#user__college_id_').val() === "" ) {
+        $("#user__new_college_").show();
+      }else {
+        $("#user__new_college_").hide();
+      }
+    });
+  });
+</script>
