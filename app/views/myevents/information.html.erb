@@ -14,8 +14,8 @@
         </div>
       </div>
     </div>
-    <% if @event.online_registration? %>
-      <%= render :partial => "registration_accordion" %>
-    <% end %>
+  <% end %>
+  <% if @event.online_registration? %>
+    <%= render :partial => "registration_accordion" %>
   <% end %>
 </div>
