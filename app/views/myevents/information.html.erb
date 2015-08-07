@@ -1,6 +1,6 @@
 <div class="container-fluid filter">
   <div class="row-fluid">
-    <div class="col-md-9 col-xs-9 col-sm-9 well">
+    <div class="col-md-9 col-xs-12 col-sm-12 well">
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <% @event.event_tabs.each_with_index do |event_tab, i| %>  
         <div class="panel panel-default">
@@ -24,7 +24,7 @@
       </div>
     </div>
     
-    <div class="well col-md-3 col-sm-3 col-xs-3">
+    <div class="well col-md-3 col-sm-3 col-xs-3 hidden-xs hidden-sm">
       Bulletin comes here !
     </div>
   </div>
