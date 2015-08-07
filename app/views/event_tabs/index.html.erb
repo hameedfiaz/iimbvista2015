@@ -11,7 +11,7 @@
     </div>
     <div <%= "id='collapse#{event_tab.id}'" %> class="panel-collapse collapse" role="tabpanel" <%= "aria-labelledby='heading#{event_tab.id}'" %> >
       <div class="panel-body">
-        <p><b>Description</b><br/>
+        <p class="well"><b>Description</b><br/>
         <%= event_tab.description.html_safe %></p>
         <p><b>Ranking</b><br/>
         <%= event_tab.rank %></p>

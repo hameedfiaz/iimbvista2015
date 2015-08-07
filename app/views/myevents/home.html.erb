@@ -1,26 +1,30 @@
 <div class="container-fluid filter">
 	<div class="row-fluid">
 		<div class="col-md-9 col-xs-12 col-sm-12 well">
+			<ol class="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li><a href="/myevents/home" class="active">All Events</a></li>
+			</ol>
 			<center>
 				<div class="filter-options btn-group">
-					<center><button <%= "data-group='all'" %> class="btn btn--warning filter_btn">All</button>
+					<center><button <%= "data-group='all'" %> class="btn btn-warning filter_btn">All</button>
 						<% @event_categories.each do |event_category| %>
-						<button <%= "data-group='#{event_category.id}'" %> class="btn btn--warning filter_btn"><%= event_category.title %></button>
+						<button <%= "data-group='#{event_category.id}'" %> class="btn btn-warning filter_btn"><%= event_category.title %></button>
 						<% end %>
-						<button <%= "data-group='flagship'" %> class="btn btn--warning filter_btn">Flagship</button>
+						<button <%= "data-group='flagship'" %> class="btn btn-warning filter_btn">Flagship</button>
 					</center>
 				</div>
 			</center>
 			<br/>
 			<div class="row-fluid text-right">
-				<input type="search" placeholder="Search..." class="filter__search js-shuffle-search">
+				<input type="text" placeholder="Search..." class="filter__search js-shuffle-search form-control">
 			</div>
 			<br/>
 			<div class="row">
 				<div id="grid" class="row-fluid">
 					<% @events.each do |event| %>
 					<% if event %>
-					<div class="item blue col-md-3 col-xs-3 col-sm-3" <%= "data-title='#{event.title}'" %> <%= event.flagship ? "data-groups='[\"all\",\"flagship\",\"#{event.event_category_id}\"]'" : "data-groups='[\"all\",\"#{event.event_category_id}\"]'"%>>
+					<div class="item col-md-3 col-xs-3 col-sm-3" <%= "data-title='#{event.title}'" %> <%= event.flagship ? "data-groups='[\"all\",\"flagship\",\"#{event.event_category_id}\"]'" : "data-groups='[\"all\",\"#{event.event_category_id}\"]'"%>>
 						<!-- <img src="/assets/img/avatar.png" width="90%" /> -->
 						<span class="picture-item__title"><a <%= "href='/myevents/information/#{event.id}'" %>><%= event.title %></a></span>
 					</div>
@@ -29,11 +33,11 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="well col-md-3 col-sm-3 col-xs-3 hidden-xs hidden-sm">
 			Bulletin comes here !
 		</div>
 	</div>
-	
+
 </div>
 

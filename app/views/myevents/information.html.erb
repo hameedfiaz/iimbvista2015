@@ -1,6 +1,11 @@
 <div class="container-fluid filter">
   <div class="row-fluid">
     <div class="col-md-9 col-xs-12 col-sm-12 well">
+      <ol class="breadcrumb">
+      <li><a href="/home/index">Home</a></li>
+        <li><a href="/myevents/home">All Events</a></li>
+        <li class="active"><%= @event.title %></li>
+      </ol>
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <% @event.event_tabs.each_with_index do |event_tab, i| %>  
         <div class="panel panel-default">
