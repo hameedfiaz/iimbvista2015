@@ -1,34 +1,39 @@
 <div class="container-fluid filter">
 	<div class="row-fluid">
-		<div class="col-md-12 col-xs-12 col-sm-12">
+		<div class="col-md-9 col-xs-9 col-sm-9 well">
 			<center>
 				<div class="filter-options btn-group">
 					<center><button <%= "data-group='all'" %> class="btn btn--warning filter_btn">All</button>
-					<% @event_categories.each do |event_category| %>
+						<% @event_categories.each do |event_category| %>
 						<button <%= "data-group='#{event_category.id}'" %> class="btn btn--warning filter_btn"><%= event_category.title %></button>
-					<% end %>
-					<button <%= "data-group='flagship'" %> class="btn btn--warning filter_btn">Flagship</button>
+						<% end %>
+						<button <%= "data-group='flagship'" %> class="btn btn--warning filter_btn">Flagship</button>
 					</center>
 				</div>
 			</center>
-		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="row-fluid text-right">
-			<input type="search" placeholder="Search..." class="filter__search js-shuffle-search">
-		</div>
-	</div>
-
-</div>
-
-<div id="grid" class="row-fluid">
-		<% @events.each do |event| %>
-			<% if event %>
-				<div class="item blue col-md-3 col-xs-3 col-sm-3" <%= "data-title='#{event.title}'" %> <%= event.flagship ? "data-groups='[\"all\",\"flagship\",\"#{event.event_category_id}\"]'" : "data-groups='[\"all\",\"#{event.event_category_id}\"]'"%>>
-					<!-- <img src="/assets/img/avatar.png" width="90%" /> -->
-					<span class="picture-item__title"><a <%= "href='/myevents/information/#{event.id}'" %>><%= event.title %></a></span>
+			<br/>
+			<div class="row-fluid text-right">
+				<input type="search" placeholder="Search..." class="filter__search js-shuffle-search">
+			</div>
+			<br/>
+			<div class="row">
+				<div id="grid" class="row-fluid">
+					<% @events.each do |event| %>
+					<% if event %>
+					<div class="item blue col-md-3 col-xs-3 col-sm-3" <%= "data-title='#{event.title}'" %> <%= event.flagship ? "data-groups='[\"all\",\"flagship\",\"#{event.event_category_id}\"]'" : "data-groups='[\"all\",\"#{event.event_category_id}\"]'"%>>
+						<!-- <img src="/assets/img/avatar.png" width="90%" /> -->
+						<span class="picture-item__title"><a <%= "href='/myevents/information/#{event.id}'" %>><%= event.title %></a></span>
+					</div>
+					<% end %>
+					<% end %>
 				</div>
-			<% end %>
-		<% end %>
+			</div>
+		</div>
+		
+		<div class="well col-md-3 col-sm-3 col-xs-3">
+			Bulletin comes here !
+		</div>
+	</div>
+	
 </div>
 
