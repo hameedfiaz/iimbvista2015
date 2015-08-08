@@ -71,6 +71,15 @@
 .myevents-banner {
 	background-image: url(../assets/img/BG_2.png);
 	width: 100%;
-	height: 40vh;
-	margin-bottom: 5vh; 
+	height: 200px;
+	margin-bottom: 20px;
+	color: #fff;
+	font-weight: 40;
+}
+
+.banner-text {
+	padding-top: 130px;
+	font-size: 50px !important;
+	padding-left: 10%;
+	font-family: "Lucida Grande";
 }

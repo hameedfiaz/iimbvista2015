@@ -9,10 +9,12 @@ img/06-screenshot.jpg: img/06-screenshot-05f410ca131137f2566136b5a55d37ce.jpg
 img/07-screenshot.jpg: img/07-screenshot-6357ff26e9007e0830a1ea14ae671b0b.jpg
 img/08-screenshot.jpg: img/08-screenshot-6cc3d777006587f6ea8e18b7914532d7.jpg
 img/BG_2.png: img/BG_2-85916c351c0d4df5f195c167243d1b13.png
-img/BG_3.png: img/BG_3-e38b47e13d84308bc613f5eedebecd9a.png
+img/BG_3.png: img/BG_3-f9272b1ef4c6d70a1333412956ca38c3.png
+img/IIMB-Logo.png: img/IIMB-Logo-2a023f0e1d299ed013e5b3c828f97037.png
 img/Screen1.png: img/Screen1-43da818e9113c0301d6e8f1f7d49aaaf.png
 img/Screen2.png: img/Screen2-36443a8a8e1f3668e131b230c206000c.png
 img/Screen3.png: img/Screen3-33dbb7a1bb56083df8fd2b38d7ed1fcb.png
+img/Vista_Logo.png: img/Vista_Logo-96e2ac062d983360ca6c1eb2bc98c2eb.png
 img/avatar.jpg: img/avatar-789a40e14df794efec2fe67a1b66cceb.jpg
 img/avatar.png: img/avatar-c14be503bc629d324cd2fb53f0245702.png
 img/avatar@2x.png: img/avatar@2x-daf3aee1b5cf63e5c4b00366085f9410.png
@@ -37,6 +39,7 @@ img/grid.png: img/grid-1efdc7b1cca98865cb26c3c23c7171ff.png
 img/hero-01.jpg: img/hero-01-58bf21c46c8c3f619346bca793cd94f4.jpg
 img/hero.jpg: img/hero-1ed23b306fb201b1ebafe33bcd37d004.jpg
 img/home-iimb-logo.png: img/home-iimb-logo-b406b5162cd951e128f8f89b21597a6b.png
+img/home_text.png: img/home_text-90771fe2340f91dc9ec0350a589af35e.png
 img/html5-logo.png: img/html5-logo-d97df15e8714d736791a967a9af926c6.png
 img/html5-logo@2x.png: img/html5-logo@2x-eafb59bd87d8eb98f926eaa5ceb33702.png
 img/iimb-01.jpg: img/iimb-01-670232dbae0bcde45c2e48bb24754d2f.jpg
@@ -79,5 +82,5 @@ slider/example-slide-2.jpg: slider/example-slide-2-7f269633b6b418db0e625f44fa73b
 slider/example-slide-3.jpg: slider/example-slide-3-90dbde6e90ba1e5670600a1a0ea715dd.jpg
 slider/example-slide-4.jpg: slider/example-slide-4-7a818ffddb3078c3ef6cca13e07146fc.jpg
 application.js: application-83416c6bc9d9f1fc9318931a3ad56981.js
-application.css: application-078a4b6238213dec2be4444d2f41255e.css
+application.css: application-fbb725da19213aadff0389f539d93431.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map

@@ -449,11 +449,10 @@ p {
     line-height: 25px;
 }
 a {
-    color: #DA8B73
+    color: #FF7373
 }
 a:hover, a:focus {
-    color: #DA8B73;
-    text-decoration: none;
+    color: inherit;
 }
 .texture-overlay {
     position: absolute;
@@ -477,7 +476,7 @@ Buttons
     font-size: 16px;
 }
 .use-btn:hover, .use-btn:focus {
-    background-color: #DA8B73;
+    background-color: #FF7373;
     color: #fff;
     text-decoration: none;
 }
@@ -492,7 +491,7 @@ Buttons
     font-size: 16px;
 }
 .learn-btn:hover, .learn-btn:focus, .mydownload-btn:hover, .mydownload-btn:focus {
-    background-color: #DA8B73;
+    background-color: #FF7373;
     color: #fff;
     text-decoration: none;
 }
@@ -501,12 +500,12 @@ Buttons
     padding: 18px 46px;
     border: 2px solid #fff;
     border-radius: 3px;
-    color: #DA8B73;
+    color: #FF7373;
     font-size: 16px;
 }
 .download-btn:hover, .download-btn:focus {
-    border-color: #DA8B73;
-    color: #DA8B73;
+    border-color: #FF7373;
+    color: #FF7373;
     text-decoration: none;
 }
 .read-more-btn {
@@ -598,7 +597,7 @@ Hero
 ========================================================================== */
 .hero {
     width: 100% !important;
-    height:100% !important;
+    height: 100vh !important;
     position: relative;
     padding: 60px 0 60px 0;
     min-height: 800px;
@@ -661,11 +660,11 @@ section.video a {
     color: #323a45
 }
 section.video a:hover, section.video a:focus {
-    color: #DA8B73;
+    color: #FF7373;
     text-decoration: none;
 }
 section.video a:hover i, section.video a:focus i {
-    color: #DA8B73
+    color: #FF7373
 }
 
 /* ==========================================================================
@@ -951,7 +950,7 @@ Screenshots
     color: #fff
 }
 .screenshots figcaption a:hover, .screenshots figcaption a:focus {
-    color: #DA8B73
+    color: #FF7373
 }
 .screenshots figure:hover figcaption, .screenshots figure:focus figcaption {
     opacity: 1
@@ -1093,8 +1092,8 @@ Nav Overlay
     transition: all 300ms ease-in-out;
 }
 .overlay ul li a:hover, .overlay ul li a:focus {
-    border-color: #DA8B73;
-    color: #DA8B73;
+    border-color: #FF7373;
+    color: #FF7373;
 }
 
 /* Effects */
@@ -1163,7 +1162,7 @@ Waypoints
 }
 
 .btn-custom {
-    background-color: #DA8B73;
+    background-color: #FF7373;
     color: #fff;
     text-decoration: none;
 }
