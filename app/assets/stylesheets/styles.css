@@ -482,7 +482,7 @@ Buttons
     text-decoration: none;
 }
 
-.learn-btn {
+.learn-btn, .mydownload-btn {
     display: inline-block;
     margin: 0 10px 10px 0;
     padding: 20px 50px;
@@ -491,7 +491,7 @@ Buttons
     color: #4b98a9;
     font-size: 16px;
 }
-.learn-btn:hover, .learn-btn:focus {
+.learn-btn:hover, .learn-btn:focus, .mydownload-btn:hover, .mydownload-btn:focus {
     background-color: #DA8B73;
     color: #fff;
     text-decoration: none;
@@ -501,7 +501,7 @@ Buttons
     padding: 18px 46px;
     border: 2px solid #fff;
     border-radius: 3px;
-    color: #fff;
+    color: #DA8B73;
     font-size: 16px;
 }
 .download-btn:hover, .download-btn:focus {
@@ -597,10 +597,12 @@ Navigation
 Hero
 ========================================================================== */
 .hero {
+    width: 100% !important;
+    height:100% !important;
     position: relative;
     padding: 60px 0 60px 0;
     min-height: 800px;
-    background: rgb(40, 70, 102) url('../assets/img/iimb-01.jpg') no-repeat center center;
+    background: rgb(40, 70, 102) url('../assets/img/BG_3.png') no-repeat center center;
     background-size: cover;
     color: #fff;
 }
@@ -701,7 +703,7 @@ Features Slider
     position: relative;
     padding: 11% 100px 10% 100px;
     height: 400px;
-    background-color: #C06E37;
+    background-color: #E65243;
 }
 .features-slider ul {
     margin: 0;
@@ -738,7 +740,7 @@ Features Slider
 }
 
 .white-on-orange {
-    background-color: #C06E37
+    background-color: #E65243
 }
 
 .white-on-orange h1 {
@@ -758,12 +760,12 @@ Features Slider
 
 .orange-on-white h1 {
     margin-bottom: 15px;
-    color: #C06E37;
+    color: #E65243;
     font-weight: 400;
     font-size: 22px;
 }
 .orange-on-white p {
-    color: #C06E37;
+    color: #E65243;
     font-size: 14px;
 }
 
@@ -836,7 +838,7 @@ blockquote .logo-quote {
 Showcase
 ========================================================================== */
 .showcase {
-    background: url('../assets/img/showcase-bg-fixed-01.jpg') no-repeat center center fixed;
+    background: url('../assets/img/showcase-bg-fixed.png') no-repeat center center fixed;
     background-size: cover;
 }
 .showcase h1 {
@@ -992,7 +994,7 @@ Download Now
 ========================================================================== */
 .download {
     padding: 120px 0;
-    background-color: #C06E37;
+    background-color: #E65243;
 }
 .download h1 {
     margin: 0 0 15px 0;
@@ -1025,7 +1027,7 @@ footer li {
     font-weight: 400;
 }
 footer li a {
-    color: #C06E37
+    color: #E65243
 }
 footer li:last-child {
     margin-right: 0
@@ -1154,3 +1156,16 @@ Waypoints
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
+
+.pic-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-custom {
+    background-color: #DA8B73;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*====================================================================*/

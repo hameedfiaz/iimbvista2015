@@ -2,7 +2,7 @@
   <div class="row-fluid">
     <div class="col-md-9 col-xs-12 col-sm-12 well">
       <ol class="breadcrumb">
-      <li><a href="/home/index">Home</a></li>
+      <li><a href="/">Home</a></li>
         <li><a href="/myevents/home">All Events</a></li>
         <li class="active"><%= @event.title %></li>
       </ol>
@@ -31,8 +31,18 @@
       </div>
     </div>
     
-    <div class="well col-md-3 col-sm-3 col-xs-3 hidden-xs hidden-sm">
-      Bulletin comes here !
+    <div class="col-md-3 col-sm-3 col-xs-3 hidden-xs hidden-sm">
+      <div class="panel panel-default">
+        <div class="panel-heading red-heading">
+          What's happening !
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>first bulletin point</li>
+            <li>second bulleting point</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
   

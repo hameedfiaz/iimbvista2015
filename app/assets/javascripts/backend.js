@@ -51,7 +51,7 @@ $('.filter_btn').click(function (e) {
                     return false;
                 }
 
-                var text = $.trim( $el.find('.picture-item__title').text() ).toLowerCase();
+                var text = $.trim( $el.find('.pic-title').attr("title") ).toLowerCase();
                 return text.indexOf(val) !== -1;
             });
         });

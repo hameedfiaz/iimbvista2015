@@ -7,11 +7,11 @@
 			</ol>
 			<center>
 				<div class="filter-options btn-group">
-					<center><button <%= "data-group='all'" %> class="btn btn-warning filter_btn">All</button>
+					<center><button <%= "data-group='all'" %> class="btn btn-custom filter_btn">All</button>
 						<% @event_categories.each do |event_category| %>
-						<button <%= "data-group='#{event_category.id}'" %> class="btn btn-warning filter_btn"><%= event_category.title %></button>
+						<button <%= "data-group='#{event_category.id}'" %> class="btn btn-custom filter_btn"><%= event_category.title %></button>
 						<% end %>
-						<button <%= "data-group='flagship'" %> class="btn btn-warning filter_btn">Flagship</button>
+						<button <%= "data-group='flagship'" %> class="btn btn-custom filter_btn">Flagship</button>
 					</center>
 				</div>
 			</center>
@@ -24,7 +24,7 @@
 					<% @events.each do |event| %>
 					<% if event %>
 					<div class="item col-md-3 col-xs-12 col-sm-6" <%= "data-title='#{event.title}'" %> <%= event.flagship ? "data-groups='[\"all\",\"flagship\",\"#{event.event_category_id}\"]'" : "data-groups='[\"all\",\"#{event.event_category_id}\"]'"%>>
-						<img src="/assets/img/01-screenshot.jpg" style="max-width:100%;max-height:100%;" />
+						<a <%= "href='/myevents/information/#{event.id}'" %>><img class="pic-title" <%= "title='#{event.title}'" %> src="/assets/img/01-screenshot.jpg" style="max-width:100%;max-height:100%;" /></a>
 					</div>
 					<% end %>
 					<% end %>
@@ -33,8 +33,8 @@
 		</div>
 		<div class="col-md-3 col-sm-3 col-xs-3 hidden-xs hidden-sm">
 			<div class="panel panel-default">
-				<div class="panel-heading">
-					Bulletin comes here !
+				<div class="panel-heading red-heading">
+					What's Happening !
 				</div>
 				<div class="panel-body">
 					<ul>

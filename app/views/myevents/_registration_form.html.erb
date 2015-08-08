@@ -5,24 +5,24 @@
 <% @event.max_per_team.times do |i| %>
 <% if i==0 %>
 <div class="form-group form-inline row">
-	<div class="col-md-4">
-		<label for="register[0][email]" class="control-label">Email</label>
+	<div class="col-md-6">
+		<label for="register[0][email]" class="control-label">Email</label><br/>
 		<input type="email" class="form-control" readonly="readonly" name="register[0][email]" id="register[0][email]" <%= "value='#{current_user.email}'" %> />
 	</div>
-	<div class="col-md-8">
-		<label for="register[0][phone]" class="control-label">Phone</label>
+	<div class="col-md-6">
+		<label for="register[0][phone]" class="control-label">Phone</label><br/>
 		<input type="text" class="form-control" readonly="readonly" name="register[0][phone]" id="register[0][phone]" <%= "value='#{current_user.phone}'" %> />
 	</div>
 </div>
 <% else %>
 <div class="form-group form-inline row">
-	<div <%= i<@event.min_per_team ? "class='col-md-4 required'" : "class='col-md-4'" %>>
-		<label <%= "for='register[#{i}][email]'" %> class="control-label">Email</label>
-		<input type="email" class="form-control" <%= "name='register[#{i}][email]'" %> <%= "id='register[#{i}][email]'" %> placeholder="Friend's email id">
+	<div <%= i<@event.min_per_team ? "class='col-md-6 required'" : "class='col-md-6'" %>>
+		<label <%= "for='register[#{i}][email]'" %> class="control-label">Email</label><br/>
+		<input type="email" class="form-control" <%= "name='register[#{i}][email]'" %> <%= "id='register[#{i}][email]'" %> placeholder="Team member's email id">
 	</div>
-	<div <%= i<@event.min_per_team ? "class='col-md-8 required'" : "class='col-md-8'" %>>
-		<label <%= "for='register[#{i}][phone]'" %> class="control-label">Phone</label>
-		<input type="text" class="form-control" <%= "name='register[#{i}][phone]'" %> <%= "id='register[#{i}][phone]'" %> placeholder="Friend's email id">
+	<div <%= i<@event.min_per_team ? "class='col-md-6 required'" : "class='col-md-6'" %>>
+		<label <%= "for='register[#{i}][phone]'" %> class="control-label">Phone</label><br/>
+		<input type="text" class="form-control" <%= "name='register[#{i}][phone]'" %> <%= "id='register[#{i}][phone]'" %> placeholder="Team member's phone number">
 	</div>
 </div>
 <% end %>
