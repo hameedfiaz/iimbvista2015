@@ -20,22 +20,29 @@
 				<input type="text" placeholder="Search..." class="filter__search js-shuffle-search form-control">
 			</div>
 			<br/>
-			<div class="row">
-				<div id="grid" class="row-fluid">
+				<div id="grid" class="shuffle--images row-fluid images-loaded shuffle">
 					<% @events.each do |event| %>
 					<% if event %>
-					<div class="item col-md-3 col-xs-3 col-sm-3" <%= "data-title='#{event.title}'" %> <%= event.flagship ? "data-groups='[\"all\",\"flagship\",\"#{event.event_category_id}\"]'" : "data-groups='[\"all\",\"#{event.event_category_id}\"]'"%>>
-						<!-- <img src="/assets/img/avatar.png" width="90%" /> -->
-						<span class="picture-item__title"><a <%= "href='/myevents/information/#{event.id}'" %>><%= event.title %></a></span>
+					<div class="item col-md-3 col-xs-12 col-sm-6" <%= "data-title='#{event.title}'" %> <%= event.flagship ? "data-groups='[\"all\",\"flagship\",\"#{event.event_category_id}\"]'" : "data-groups='[\"all\",\"#{event.event_category_id}\"]'"%>>
+						<img src="/assets/img/01-screenshot.jpg" style="max-width:100%;max-height:100%;" />
 					</div>
 					<% end %>
 					<% end %>
 				</div>
-			</div>
-		</div>
 
-		<div class="well col-md-3 col-sm-3 col-xs-3 hidden-xs hidden-sm">
-			Bulletin comes here !
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-3 hidden-xs hidden-sm">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Bulletin comes here !
+				</div>
+				<div class="panel-body">
+					<ul>
+						<li>first bulletin point</li>
+						<li>second bulleting point</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 

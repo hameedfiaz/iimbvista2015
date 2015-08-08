@@ -15,7 +15,7 @@
 #container {width: 100%; margin: 0 auto;}
  
 #grid {position: relative; text-align: center;}
-.item {width: 17%; height:200px; background: grey; margin-right: 0px !important; margin-bottom: 10px; color: #fff; font-size: 30px; text-align: center; line-height: 230px; cursor: default;}
+.item {background: none; margin-right: 0px !important; color: #fff; font-size: 30px; text-align: center; cursor: default;}
 .red {background: red;}
 .green {background: green;}
 .blue {background: blue;}
