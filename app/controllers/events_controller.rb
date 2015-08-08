@@ -37,7 +37,7 @@ class EventsController < ApplicationController
   # GET /events/new.json
   def new
     if current_user.is_super_admin?
-      @event_cats=EventCategory.all
+      @event_cats=EventCategory.unscoped.all
     else
       @event_cats=current_user.event_categories
     end
@@ -52,7 +52,7 @@ class EventsController < ApplicationController
   # GET /events/1/edit
   def edit    
     if current_user.is_super_admin?
-      @event_cats=EventCategory.all
+      @event_cats=EventCategory.unscoped.all
     else
       @event_cats=current_user.event_categories
     end

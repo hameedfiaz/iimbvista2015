@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :event_category_id %><br />
-    <%= select_tag "event[event_category_id]", options_from_collection_for_select(@event_cats, 'id', 'title') %>
+    <%= select_tag "event[event_category_id]", options_from_collection_for_select(@event_cats, 'id', 'title',@event.event_category_id) %>
   </div>
   <div class="field">
     <%= f.label :title %><br />

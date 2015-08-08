@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150805102534) do
+ActiveRecord::Schema.define(:version => 20150808061657) do
 
   create_table "colleges", :force => true do |t|
     t.string   "name"
@@ -36,10 +36,11 @@ ActiveRecord::Schema.define(:version => 20150805102534) do
     t.integer  "event_id"
     t.string   "title"
     t.text     "description"
-    t.boolean  "active",      :default => true
-    t.integer  "rank",        :default => 0
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.boolean  "active",                  :default => true
+    t.integer  "rank",                    :default => 0
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+    t.boolean  "show_after_registration", :default => false
   end
 
   create_table "events", :force => true do |t|

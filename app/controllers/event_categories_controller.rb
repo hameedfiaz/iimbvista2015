@@ -10,7 +10,7 @@ class EventCategoriesController < ApplicationController
 
   def index
     if current_user.is_super_admin?
-      @event_categories = EventCategory.all
+      @event_categories = EventCategory.unscoped.all
     elsif
       redirect_to events_my_events_path
     end
@@ -24,7 +24,7 @@ class EventCategoriesController < ApplicationController
   # GET /event_categories/1
   # GET /event_categories/1.json
   def show
-    @event_category = EventCategory.find(params[:id])
+    @event_category = EventCategory.unscoped.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -45,7 +45,7 @@ class EventCategoriesController < ApplicationController
 
   # GET /event_categories/1/edit
   def edit
-    @event_category = EventCategory.find(params[:id])
+    @event_category = EventCategory.unscoped.find(params[:id])
   end
 
   # POST /event_categories
@@ -67,7 +67,7 @@ class EventCategoriesController < ApplicationController
   # PUT /event_categories/1
   # PUT /event_categories/1.json
   def update
-    @event_category = EventCategory.find(params[:id])
+    @event_category = EventCategory.unscoped.find(params[:id])
 
     respond_to do |format|
       if @event_category.update_attributes(params[:event_category])
@@ -83,7 +83,7 @@ class EventCategoriesController < ApplicationController
   # DELETE /event_categories/1
   # DELETE /event_categories/1.json
   def destroy
-    @event_category = EventCategory.find(params[:id])
+    @event_category = EventCategory.unscoped.find(params[:id])
     @event_category.destroy
 
     respond_to do |format|
