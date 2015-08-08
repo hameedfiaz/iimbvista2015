@@ -8,7 +8,11 @@ gem 'rails', '3.2.0'
 group :development do
   gem 'mysql2'
   gem 'debugger'
+  gem 'foreman'
 end
+
+gem 'delayed_job_active_record'
+gem 'daemons'
 
 group :production do
   gem 'pg', '0.12.2'
