@@ -3,7 +3,7 @@ class MyeventsController < ApplicationController
 	layout "myevents"
 	def home
 		@event_categories=EventCategory.all
-		@events=Event.all
+		@events=Event.order(:title)
 	end
 
 	def information

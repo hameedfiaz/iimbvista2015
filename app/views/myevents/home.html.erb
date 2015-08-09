@@ -20,15 +20,15 @@
 				<input type="text" placeholder="Search..." class="filter__search js-shuffle-search form-control">
 			</div>
 			<br/>
-				<div id="grid" class="shuffle--images row-fluid images-loaded shuffle">
-					<% @events.each do |event| %>
-					<% if event %>
-					<div class="item col-md-3 col-xs-12 col-sm-6" <%= "data-title='#{event.title}'" %> <%= event.flagship ? "data-groups='[\"all\",\"flagship\",\"#{event.event_category_id}\"]'" : "data-groups='[\"all\",\"#{event.event_category_id}\"]'"%>>
-						<a <%= "href='/myevents/information/#{event.id}'" %>><img class="pic-title" <%= "title='#{event.title}'" %> src="/assets/img/01-screenshot.jpg" style="max-width:100%;max-height:100%;" /></a>
-					</div>
-					<% end %>
-					<% end %>
+			<div id="grid" class="shuffle--images row-fluid images-loaded shuffle">
+				<% @events.each do |event| %>
+				<% if event %>
+				<div class="item col-md-3 col-xs-12 col-sm-6" <%= "data-title='#{event.title}'" %> <%= event.flagship ? "data-groups='[\"all\",\"flagship\",\"#{event.event_category_id}\"]'" : "data-groups='[\"all\",\"#{event.event_category_id}\"]'"%>>
+					<a <%= "href='/myevents/information/#{event.id}'" %>><img class="pic-title" <%= "title='#{event.title}'" %> src="/assets/img/01-screenshot.jpg" style="max-width:100%;max-height:100%;" /></a>
 				</div>
+				<% end %>
+				<% end %>
+			</div>
 
 		</div>
 		<div class="col-md-3 col-sm-3 col-xs-3 hidden-xs hidden-sm">
@@ -48,3 +48,9 @@
 
 </div>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+		var $grid = $('#grid');
+		$("#grid").shuffle('sort');
+	});
+</script>

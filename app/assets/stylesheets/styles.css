@@ -764,19 +764,19 @@ Features Slider
 
 .orange-on-white h1 {
     margin-bottom: 15px;
-    color: #E65243;
+    color: #9A8A78;
     font-weight: 400;
     font-size: 22px;
     text-align: center;
 }
 .orange-on-white p {
-    color: #E65243;
+    color: #9A8A78;
     font-size: 14px;
     font-style: italic;
 }
 
 .more_height {
-    background-color: #E65243;
+    background-color: #fff;
     height: 30px !important;
 }
 /* ==========================================================================
