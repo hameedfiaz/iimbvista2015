@@ -1004,11 +1004,11 @@ Download Now
 ========================================================================== */
 .download {
     padding: 120px 0;
-    background-color: #E65243;
+    background-color: #fff;
 }
 .download h1 {
     margin: 0 0 15px 0;
-    color: #fff;
+    color: #E65243;
     font-weight: 400;
     font-size: 40px;
 }
