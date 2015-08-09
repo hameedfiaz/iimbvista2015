@@ -20,7 +20,7 @@ class EventTabsController < ApplicationController
   # GET /event_tabs/1
   # GET /event_tabs/1.json
   def show
-    @event_tab = EventTab.find(params[:id])
+    @event_tab = EventTab.unscoped.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -32,7 +32,7 @@ class EventTabsController < ApplicationController
   # GET /event_tabs/new.json
   def new
     if current_user.is_super_admin?
-      @events=Event.all
+      @events=Event.unscoped.all
     else
       @events = current_user.event_categories.collect{|ec| ec.events}
     end
@@ -48,12 +48,12 @@ class EventTabsController < ApplicationController
   # GET /event_tabs/1/edit
   def edit
     if current_user.is_super_admin?
-      @events=Event.all
+      @events=Event.unscoped.all
     else
       @events = current_user.event_categories.collect{|ec| ec.events}
     end
     @events=@events.flatten.compact
-    @event_tab = EventTab.find(params[:id])
+    @event_tab = EventTab.unscoped.find(params[:id])
   end
 
   # POST /event_tabs
@@ -75,7 +75,7 @@ class EventTabsController < ApplicationController
   # PUT /event_tabs/1
   # PUT /event_tabs/1.json
   def update
-    @event_tab = EventTab.find(params[:id])
+    @event_tab = EventTab.unscoped.find(params[:id])
 
     respond_to do |format|
       if @event_tab.update_attributes(params[:event_tab])
@@ -91,7 +91,7 @@ class EventTabsController < ApplicationController
   # DELETE /event_tabs/1
   # DELETE /event_tabs/1.json
   def destroy
-    @event_tab = EventTab.find(params[:id])
+    @event_tab = EventTab.unscoped.find(params[:id])
     @event_tab.destroy
 
     respond_to do |format|
@@ -102,7 +102,7 @@ class EventTabsController < ApplicationController
 
   def for_event
     event_id = params[:id]
-    @event_tabs=EventTab.where(event_id: event_id )
+    @event_tabs=EventTab.unscoped.where(event_id: event_id )
     render :template => "/event_tabs/index"
   end
 end

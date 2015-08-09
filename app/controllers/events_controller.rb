@@ -10,7 +10,7 @@ class EventsController < ApplicationController
 
   def index
     if current_user.is_super_admin?
-      @events = Event.all
+      @events = Event.unscoped.all
     else
       @events = current_user.event_categories.collect{|ec| ec.events}
       @events=@events.flatten.compact
@@ -25,7 +25,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
-    @event = Event.find(params[:id])
+    @event = Event.unscoped.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -56,7 +56,7 @@ class EventsController < ApplicationController
     else
       @event_cats=current_user.event_categories
     end
-    @event = Event.find(params[:id])
+    @event = Event.unscoped.find(params[:id])
   end
 
   # POST /events
@@ -78,7 +78,7 @@ class EventsController < ApplicationController
   # PUT /events/1
   # PUT /events/1.json
   def update
-    @event = Event.find(params[:id])
+    @event = Event.unscoped.find(params[:id])
 
     respond_to do |format|
       if @event.update_attributes(params[:event])
@@ -94,7 +94,7 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
-    @event = Event.find(params[:id])
+    @event = Event.unscoped.find(params[:id])
     @event.destroy
 
     respond_to do |format|
@@ -105,13 +105,13 @@ class EventsController < ApplicationController
 
   def for_event_category
     @event_category_id = params[:id]
-    @events=Event.where(event_category_id: @event_category_id )
+    @events=Event.unscoped.where(event_category_id: @event_category_id )
     render :template => "/events/index"
   end
 
   def my_events
     @event_category_id = current_user.event_categories.collect(&:id)
-    @events=Event.where(event_category_id: @event_category_id )
+    @events=Event.unscoped.where(event_category_id: @event_category_id )
     render :template => "/events/index"
   end
 
