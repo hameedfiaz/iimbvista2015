@@ -78,10 +78,15 @@
 }
 
 .banner-text {
-	bottom: 5px;
+	padding-top: 130px;
 	font-size: 50px !important;
 	padding-left: 10%;
 	font-family: "Lucida Grande";
-  word-wrap: break-word;
-  position: absolute;
+}
+
+@media (max-width: 767px) {
+  .banner-text {
+    font-size: 30px !important;
+  }
+
 }
