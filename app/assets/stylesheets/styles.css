@@ -758,7 +758,8 @@ Features Slider
 
 .orange-on-white {
     background-color: #fff;
-    padding-top:25px;
+    padding-top:35px;
+    padding-bottom: 10px;
 }
 
 .orange-on-white h1 {
@@ -772,11 +773,6 @@ Features Slider
     color: #E65243;
     font-size: 14px;
     font-style: italic;
-}
-
-.small_slider_divider {
-    background-color: #fff;
-    height: 10px !important;
 }
 
 .more_height {
