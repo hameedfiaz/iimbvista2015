@@ -1190,7 +1190,6 @@ Waypoints
     /*background-color: black;*/
     background-image: url("../assets/img/Login.jpg");
     background-size: cover;
-    -webkit-filter: blur(5px);
     z-index: 0;
 }
 
