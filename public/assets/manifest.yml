@@ -10,7 +10,8 @@ img/07-screenshot.jpg: img/07-screenshot-6357ff26e9007e0830a1ea14ae671b0b.jpg
 img/08-screenshot.jpg: img/08-screenshot-6cc3d777006587f6ea8e18b7914532d7.jpg
 img/BG_2.png: img/BG_2-85916c351c0d4df5f195c167243d1b13.png
 img/BG_3.png: img/BG_3-f9272b1ef4c6d70a1333412956ca38c3.png
-img/IIMB-Logo.png: img/IIMB-Logo-2a023f0e1d299ed013e5b3c828f97037.png
+img/IIMB-Logo.png: img/IIMB-Logo-fa314d429279c834a51a88bccf5b6d3e.png
+img/Login.jpg: img/Login-9917d34f103e6e29dfd61745646df3ce.jpg
 img/Screen1.png: img/Screen1-43da818e9113c0301d6e8f1f7d49aaaf.png
 img/Screen2.png: img/Screen2-36443a8a8e1f3668e131b230c206000c.png
 img/Screen3.png: img/Screen3-33dbb7a1bb56083df8fd2b38d7ed1fcb.png
@@ -66,7 +67,7 @@ img/screenshots/2.png: img/screenshots/2-91382f9607d9578a8b7d91080d7cbed5.png
 img/screenshots/3.png: img/screenshots/3-c5a737e32b2baada9e70f356321bb834.png
 img/screenshots/4.png: img/screenshots/4-9e546189dd14c4c174fde3a33153f5e5.png
 img/screenshots/5.png: img/screenshots/5-668eb1a5ef5aa734c62b1e739e5e6b11.png
-img/screenshots/6.png: img/screenshots/6-fd53e198754a9f8d5fc152567fa26970.png
+img/screenshots/6.png: img/screenshots/6-d927a4910ebeef8231f3d2b941d2a22e.png
 img/screenshots/9.png: img/screenshots/9-9e6cf097c998e17ac4961e7f8da85f87.png
 img/screenshots/flagship.png: img/screenshots/flagship-b893efa42e9052ba1e6cb1cc10c0a802.png
 img/showcase-bg-fixed-01.jpg: img/showcase-bg-fixed-01-a8e8e54f1bddcafac348580377dee25d.jpg
@@ -82,5 +83,5 @@ slider/example-slide-2.jpg: slider/example-slide-2-7f269633b6b418db0e625f44fa73b
 slider/example-slide-3.jpg: slider/example-slide-3-90dbde6e90ba1e5670600a1a0ea715dd.jpg
 slider/example-slide-4.jpg: slider/example-slide-4-7a818ffddb3078c3ef6cca13e07146fc.jpg
 application.js: application-e98819b0fbb5713ebc313c5f3f1fff09.js
-application.css: application-ae89c2de616dedf89116502fe97c4c63.css
+application.css: application-861b2fc95bfcfd1b14d4b9273e065673.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map
