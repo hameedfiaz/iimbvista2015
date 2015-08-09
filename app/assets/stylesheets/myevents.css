@@ -94,3 +94,7 @@
 .panel-body ul {
   margin: 1em 10px;
 }
+
+.panel-body ol {
+  margin: 1em 15px;
+}
