@@ -6,6 +6,7 @@ class RegistrationsController < ApplicationController
   	team_list=[]
   	registrations=params[:register]
   	team_name=params[:team_name]
+    registrations={} unless registrations
   	registrations.each do |k,v|
   		if v[:email].present? && v[:phone].present?
   			user=User.find_or_create_by_email(v[:email])
@@ -30,6 +31,7 @@ class RegistrationsController < ApplicationController
   	else
   		@message="Did not meet the minimum criteria"
   	end
-
+    flash[:error]=@message
+    redirect_to :back
   end
 end

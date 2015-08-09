@@ -739,22 +739,26 @@ Features Slider
 }
 
 .white-on-orange {
-    background-color: #E65243
+    background-color: #E65243;
+    padding-top:25px;
 }
 
 .white-on-orange h1 {
     margin-bottom: 15px;
     color: #fff;
     font-weight: 400;
+    text-align: center;
     font-size: 22px;
 }
 .white-on-orange p {
     color: #fff;
     font-size: 14px;
+    font-style: italic;
 }
 
 .orange-on-white {
-    background-color: #fff
+    background-color: #fff;
+    padding-top:25px;
 }
 
 .orange-on-white h1 {
@@ -762,12 +766,23 @@ Features Slider
     color: #E65243;
     font-weight: 400;
     font-size: 22px;
+    text-align: center;
 }
 .orange-on-white p {
     color: #E65243;
     font-size: 14px;
+    font-style: italic;
 }
 
+.small_slider_divider {
+    background-color: #fff;
+    height: 10px !important;
+}
+
+.more_height {
+    background-color: #E65243;
+    height: 30px !important;
+}
 /* ==========================================================================
 Features List
 ========================================================================== */
