@@ -12,8 +12,8 @@ class RegistrationsController < ApplicationController
   			if user.new_record?
   				user.update_attribute(:full_name, v[:email])
   				user.update_attribute(:phone, v[:phone])
-  				user.password="welcome@123"
-  				user.password_confirmation="welcome@123"
+  				user.password="welcome2vista2015"
+  				user.password_confirmation="welcome2vista2015"
   				user.save!
   			end
   			user.reload

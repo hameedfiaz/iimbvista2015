@@ -1,0 +1,8 @@
+<p>Welcome <%= @full_name %>!</p>
+
+<p>Your account for VISTA 2015 has been created succesfully, as you have been registered for one of the events by one of your friends</p>
+<p>You shall be receiving another mail with details about the event</p>
+
+<p>Use this <%= link_to "link", new_session_url(User) %> to sign in. </p>
+<p>Password : welcome2vista2015 </p>
+<p><%= link_to "Change your password", new_password_url(User) %> as soon as you login</p>
