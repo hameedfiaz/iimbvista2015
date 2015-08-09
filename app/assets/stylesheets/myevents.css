@@ -90,3 +90,7 @@
   }
 
 }
+
+.panel-body ul {
+  margin: 1em 10px;
+}
