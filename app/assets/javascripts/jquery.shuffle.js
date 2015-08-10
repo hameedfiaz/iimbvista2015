@@ -6,6 +6,7 @@ $(document).ready(function() {
     if (id !== undefined) {
       id = id.replace("#","")
       $(".btn[data-group="+id+"]").click();
+      $(".btn[data-group="+id+"]").addClass("active");
     }
   });
 /*!

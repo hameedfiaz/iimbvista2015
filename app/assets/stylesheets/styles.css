@@ -549,7 +549,7 @@ Navigation
     width: 35px;
     height: 5px;
     border-radius: 1px;
-    background: #fff;
+    background: #594444;
     cursor: pointer;
 }
 .nav-toggle span:before {
@@ -702,7 +702,7 @@ Features Slider
     position: relative;
     padding: 11% 100px 10% 100px;
     height: 400px;
-    background-color: #E65243;
+    background-color: #ff7676;
 }
 .features-slider ul {
     margin: 0;
@@ -739,7 +739,7 @@ Features Slider
 }
 
 .white-on-orange {
-    background-color: #E65243;
+    background-color: #ff7676;
     padding-top:25px;
 }
 
@@ -927,6 +927,9 @@ Screenshots
     width: 25%;
     background-color: #000;
     list-style: none;
+    border-color: white;
+    border-style: solid;
+    border-width: 4px;
 }
 .screenshots figure {
     position: relative;
@@ -1008,7 +1011,7 @@ Download Now
 }
 .download h1 {
     margin: 0 0 15px 0;
-    color: #E65243;
+    color: #ff7676;
     font-weight: 400;
     font-size: 40px;
 }
@@ -1037,7 +1040,7 @@ footer li {
     font-weight: 400;
 }
 footer li a {
-    color: #E65243
+    color: #ff7676
 }
 footer li:last-child {
     margin-right: 0

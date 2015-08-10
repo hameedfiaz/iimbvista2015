@@ -1,8 +1,23 @@
-<p>Welcome <%= @full_name %>!</p>
+<div style="border-style: solid;border-width: 2px;padding: 10px 10px 10px 10px">
+<%= image_tag attachments['header.png'].url -%> 
+<br/><br/>
+<p>Welcome <%= @resource.full_name %>!</p>
 
-<p>Your account for VISTA 2015 has been created succesfully, as you have been registered for one of the events by one of your friends</p>
-<p>You shall be receiving another mail with details about the event</p>
+<p>Your account for VISTA 2015 has been created succesfully</p>
 
-<p>Use this <%= link_to "link", new_session_url(User) %> to sign in. </p>
+<p>Use this <%= link_to "link", new_session_url(User) %> to sign in to Vista '15. </p>
+
+<p>Email : <%= @resource.email %>
 <p>Password : welcome2vista2015 </p>
 <p><%= link_to "Change your password", new_password_url(User) %> as soon as you login</p>
+ 
+Regards<br/>
+Team Vista’15<br/>
+Forum for Industrial Interaction<br/>
+Ph: +91-9686508699/+91-9916574658<br/><br/>
+<%= image_tag attachments['footer.png'].url %><br/>
+
+</div>
+<div style="border-style: solid;border-width: 2px;background-color:blue;color:white;text-align:center;border-color:black;">To stay updated, please visit and Like : https://www.facebook.com/iimbvista</div>
+<div style="border-style: solid;border-width: 2px;text-align:center;border-color:black;">© Copyright 2015 Vista - Forum for Industrial Interaction, IIM Bangalore. All rights reserved.
+</div>

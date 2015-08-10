@@ -4,7 +4,7 @@
 }
 
 .navbar-default {
-  background-color: #e74c3c !important;
+  background-color: #ff7676 !important;
   border-color: #c0392b !important;
 }
 .navbar-default .navbar-brand {
@@ -64,16 +64,17 @@
 }
 
 .red-heading {
-	background-color: #e74c3c !important;
+	background-color: #ff7676 !important;
 	color: #ecf0f1 !important;
 }
 
 .myevents-banner {
-	background-image: url(../assets/img/BG_2.png);
+	/*background-image: url(../assets/img/BG_2.png);*/
 	width: 100%;
 	height: 200px;
 	margin-bottom: 20px;
-	color: #fff;
+  color: #594444;
+	/*color: #fff;*/
 	font-weight: 40;
 }
 
@@ -97,4 +98,8 @@
 
 .panel-body ol {
   margin: 1em 15px;
+}
+
+button.active {
+  color: #333;
 }

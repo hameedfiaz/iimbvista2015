@@ -21,13 +21,14 @@ class RegistrationsController < ApplicationController
   			team_list<<user
   		end
   	end
- 	check_team=Team.find_by_name(team_name)
- 	if check_team
- 		@message="Same Team name already exists"
- 	elsif team_list.count >= event.min_per_team
+ 	  check_team=Team.find_by_name(team_name)
+ 	  if check_team
+ 		 @message="Same Team name already exists"
+ 	  elsif team_list.count >= event.min_per_team
   		team=Team.create({event_id: event.id, name: team_name})
   		team.users=team_list
   		team.save!
+      team.send_event_reg_mails
   	else
   		@message="Did not meet the minimum criteria"
   	end
