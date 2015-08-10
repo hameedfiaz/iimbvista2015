@@ -12,9 +12,9 @@ img/BG_2.png: img/BG_2-85916c351c0d4df5f195c167243d1b13.png
 img/BG_3.png: img/BG_3-f9272b1ef4c6d70a1333412956ca38c3.png
 img/IIMB-Logo.png: img/IIMB-Logo-fa314d429279c834a51a88bccf5b6d3e.png
 img/Login.jpg: img/Login-9917d34f103e6e29dfd61745646df3ce.jpg
-img/Screen1.png: img/Screen1-43da818e9113c0301d6e8f1f7d49aaaf.png
-img/Screen2.png: img/Screen2-36443a8a8e1f3668e131b230c206000c.png
-img/Screen3.png: img/Screen3-33dbb7a1bb56083df8fd2b38d7ed1fcb.png
+img/Screen1.png: img/Screen1-4ad1154f319108e8126e54cdb321142b.png
+img/Screen2.png: img/Screen2-4386ff242991192e1887052247610efc.png
+img/Screen3.png: img/Screen3-6a5c4dcc00afeee631157ffecdb57c45.png
 img/Vista_Logo.png: img/Vista_Logo-96e2ac062d983360ca6c1eb2bc98c2eb.png
 img/avatar.jpg: img/avatar-789a40e14df794efec2fe67a1b66cceb.jpg
 img/avatar.png: img/avatar-c14be503bc629d324cd2fb53f0245702.png
@@ -46,6 +46,7 @@ img/html5-logo@2x.png: img/html5-logo@2x-eafb59bd87d8eb98f926eaa5ceb33702.png
 img/iimb-01.jpg: img/iimb-01-670232dbae0bcde45c2e48bb24754d2f.jpg
 img/indigenous-home.png: img/indigenous-home-f6e7330faeb416f8b0805b0bc9ff7add.png
 img/iphone-skeleton.png: img/iphone-skeleton-b64a94040d86bb97ce81c693ffce68f7.png
+img/iphone-with-img.png: img/iphone-with-img-3e2825147f06f103e66dd5734c7ae84d.png
 img/large/01.jpg: img/large/01-91534bd89eaec46a6774492c5e361b1d.jpg
 img/large/02.jpg: img/large/02-5374dd35498ec5002567b6ab00c3697f.jpg
 img/large/03.jpg: img/large/03-bd4eb14bcff06ff14088d828634116f0.jpg
@@ -85,5 +86,5 @@ slider/example-slide-2.jpg: slider/example-slide-2-7f269633b6b418db0e625f44fa73b
 slider/example-slide-3.jpg: slider/example-slide-3-90dbde6e90ba1e5670600a1a0ea715dd.jpg
 slider/example-slide-4.jpg: slider/example-slide-4-7a818ffddb3078c3ef6cca13e07146fc.jpg
 application.js: application-0224d355d5c2a6f344eb1bb685bb0002.js
-application.css: application-04e2e47a5de788a3117e2185b0bd8259.css
+application.css: application-11c87e54304483a324b29b8e60e09d9a.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map

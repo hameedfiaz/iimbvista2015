@@ -865,7 +865,8 @@ Showcase
     left: 20%;
     min-height: 676px;
     width: 359px;
-    background: url('../assets/img/iphone-skeleton.png') no-repeat center center;
+    background: url('../assets/img/iphone-with-img.png') no-repeat center center;
+    /*background: url('../assets/img/iphone-skeleton.png') no-repeat center center;*/
 }
 .device-content {
     position: absolute;
@@ -1177,6 +1178,7 @@ Waypoints
     background-color: #e74c3c;
     color: #fff;
     text-decoration: none;
+    margin-bottom: 2px;
 }
 
 /*====================================================================*/
