@@ -809,10 +809,8 @@ Features List
     border-radius: 50%;
     vertical-align: top;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 90px;
-}
-.feature-icon i {
     color: #B26836
 }
 
@@ -1176,7 +1174,7 @@ Waypoints
 }
 
 .btn-custom {
-    background-color: #FF7373;
+    background-color: #e74c3c;
     color: #fff;
     text-decoration: none;
 }
@@ -1323,4 +1321,19 @@ Waypoints
 
 ::-moz-input-placeholder{
    color: rgba(255,255,255,0.6);
+}
+
+.circle{
+  width:30%;
+  border-radius:50%;
+  text-align:center;
+  font-size: 20px;
+  padding:20% 0;
+  line-height:0;
+  background: #fff;
+  color: #FF7373;
+  border-color: #FF7373;
+  border-width: 1px;
+  border-style: solid;
+  font-family: Helvetica, Arial Black, sans;
 }
