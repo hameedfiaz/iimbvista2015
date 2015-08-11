@@ -33,4 +33,8 @@ class Event < ActiveRecord::Base
   def teams_registered
   	Team.where(event_id: id).count
   end
+
+  def title_description
+    description.html_safe.gsub("<p>","").gsub("</p>","")
+  end
 end
