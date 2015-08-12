@@ -2,7 +2,11 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VISTA '15 - Get Indigenous</title>
+  <% if @event %>
+  <title><%= @event.title %>- Vista '15</title>
+  <% else %>
+  <title>VISTA '15 - Get Indi-Genius</title>
+  <% end %>
   <meta name="description" content="The Annual International Business Summit at IIM Bangalore" />
   <meta name="keywords" content="iimb-vista, vista2015, vista15, iimb-vista, vista, iimb-fii, web vista'15" />
   <%= stylesheet_link_tag    "application", :media => "all" %>

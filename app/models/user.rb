@@ -36,6 +36,10 @@ class User < ActiveRecord::Base
     roles.include?(Role.find_by_name("CategoryAdmin"))
   end
 
+  def is_bulletin_admin?
+    roles.include?(Role.find_by_name("BulletinAdmin"))
+  end
+
   def category
     
   end

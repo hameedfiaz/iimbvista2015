@@ -1,0 +1,30 @@
+<%= form_for(@bulletin) do |f| %>
+  <% if @bulletin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bulletin.errors.count, "error") %> prohibited this bulletin from being saved:</h2>
+
+      <ul>
+      <% @bulletin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.check_box :link %>
+  </div>
+  <div class="field">
+    <%= f.label :link_url %><br />
+    <%= f.text_field :link_url %>
+    <small>Give full url... That is : http://www.iimb-vista.com</small>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

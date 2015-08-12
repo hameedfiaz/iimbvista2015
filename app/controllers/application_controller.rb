@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def after_sign_in_path_for(resource)
-		if user_signed_in? && (current_user.is_super_admin? || current_user.is_category_admin?)
+		if user_signed_in? && (current_user.is_super_admin? || current_user.is_category_admin? || current_user.is_bulletin_admin? )
       backend_index_path
     else
       session[:previous_url] || root_path

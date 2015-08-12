@@ -1,0 +1,13 @@
+<ul>
+<% @bulletins.each do |bulletin| %>
+	<li>
+	<% if bulletin.link %>
+		<a <%= "href=#{bulletin.link_url}" %>>
+	<% end %>
+	<%= bulletin.text %>
+	<% if bulletin.link %>
+		</a>
+	<% end %>
+	</li>
+<% end %>
+</ul>

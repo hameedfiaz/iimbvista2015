@@ -1,4 +1,6 @@
 Iimbvista2015::Application.routes.draw do
+  resources :bulletins
+
   post "registrations/register"
 
   get "myevents/home"

@@ -9,6 +9,8 @@ class Ability
     elsif user.role? :category_admin
       can :manage, [Event, EventTab]
       can :read, [EventCategory]
+    elsif user.role? :bulletin_admin
+      can :manage, [Bulletin]  
     end
     # Define abilities for the passed in user here. For example:
     #
