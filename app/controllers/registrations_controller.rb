@@ -18,7 +18,7 @@ class RegistrationsController < ApplicationController
   				user.save!
   			end
   			user.reload
-  			team_list<<user
+  			team_list<<user if !team_list.include?(user)
   		end
   	end
  	  check_team=Team.find_by_name(team_name)

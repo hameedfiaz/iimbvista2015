@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :events
   has_and_belongs_to_many :teams
 
+  validates :phone, length: { minimum: 10 }
+
   after_create :send_welcome_mail
   
   def send_welcome_mail
