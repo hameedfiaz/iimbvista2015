@@ -17,8 +17,8 @@ class User < ActiveRecord::Base
   validates :phone, length: { minimum: 10 }
 
   after_create :send_welcome_mail
-  
-  def send_welcome_mail
+
+    def send_welcome_mail
     if full_name!=email
       MyMailer.delay.thank_you(self)
     else
