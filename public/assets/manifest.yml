@@ -36,11 +36,13 @@ img/event_images/22.png: img/event_images/22-d329cef69a03290a6989b7125940bbb8.pn
 img/event_images/23.png: img/event_images/23-8c9f63e0c4d55fe1c653c054e4f6b6fc.png
 img/event_images/24.png: img/event_images/24-021ad7fc52c0c6af2c5a2cb95ce29572.png
 img/event_images/25.png: img/event_images/25-68de961e4f4d1c6ea82c3503c85095e7.png
+img/event_images/26.png: img/event_images/26-80024f1c283d9b873d1b2a5211fb209d.png
+img/event_images/27.png: img/event_images/27-0d87c438ecea40978e3f5c75449e515b.png
 img/event_images/3.png: img/event_images/3-b5115d13c47755a6f63fe48795519058.png
 img/event_images/4.png: img/event_images/4-7262ac32f0a889ba5cf3c1c4358542d1.png
 img/event_images/5.png: img/event_images/5-74407af5770d75337cd8f75bc0b3bd65.png
 img/event_images/8.png: img/event_images/8-49fbd09f13299c74f2db25fdd7706c01.png
-img/event_images/9.png: img/event_images/9-ca48d8e89faf08bab3cbf1923598545d.png
+img/event_images/9.png: img/event_images/9-1f7b766a3c046f3828bb2ba86c813dd6.png
 img/fancybox_loading.gif: img/fancybox_loading-a1cca7db8e30e0d0cc08d1e7eee6ae3a.gif
 img/fancybox_loading@2x.gif: img/fancybox_loading@2x-a7d3690e6d1419776331edeb757ad693.gif
 img/fancybox_overlay.png: img/fancybox_overlay-6b1b5f8418b942ba31549e9e1ac7e24d.png
@@ -100,6 +102,6 @@ slider/example-slide-1.jpg: slider/example-slide-1-851429e3aa20cfa22538c90c964d0
 slider/example-slide-2.jpg: slider/example-slide-2-7f269633b6b418db0e625f44fa73b649.jpg
 slider/example-slide-3.jpg: slider/example-slide-3-90dbde6e90ba1e5670600a1a0ea715dd.jpg
 slider/example-slide-4.jpg: slider/example-slide-4-7a818ffddb3078c3ef6cca13e07146fc.jpg
-application.js: application-0224d355d5c2a6f344eb1bb685bb0002.js
-application.css: application-056d02196ec055041218363263b6814b.css
+application.js: application-d78c9f5abdda514dab525ed09d1954c9.js
+application.css: application-87e8127b190ea34cd4b6872f80f02701.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map
