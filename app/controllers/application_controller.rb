@@ -34,14 +34,15 @@ class ApplicationController < ActionController::Base
 
   def sanitize_college_data
     user_param=params[:user]
-    debugger
-    if user_param[:college_id].to_i==0
-      new_college=user_param[:new_college_name]
-      new_college=College.create({name: new_college})
-      user_param[:college_id]=new_college.id
+    if user_param
+      if user_param[:college_id] && user_param[:college_id].to_i==0
+        new_college=user_param[:new_college_name]
+        new_college=College.create({name: new_college})
+        user_param[:college_id]=new_college.id
+      end
+      user_param.delete("new_college_name")
+      params[:user]=user_param
     end
-    user_param.delete("new_college_name")
-    params[:user]=user_param
   end
 
 end
