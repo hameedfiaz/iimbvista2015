@@ -13,6 +13,7 @@ class RegistrationsController < ApplicationController
   			if user.new_record?
   				user.update_attribute(:full_name, v[:email])
   				user.update_attribute(:phone, v[:phone])
+          user.update_attribute(:college_id, current_user.college_id)
   				user.password="welcome2vista2015"
   				user.password_confirmation="welcome2vista2015"
   				user.save!

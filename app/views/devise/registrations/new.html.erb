@@ -7,7 +7,7 @@
     <br>
 <div class="login">
 <h2>Sign up</h2>
-<% college_list = College.all.map{|p| [p.name, p.id] } %>
+<% college_list = College.order(:name).map{|p| [p.name, p.id] } %>
 <% college_list << ["Others",""] %>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
