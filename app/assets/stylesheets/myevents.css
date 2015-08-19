@@ -69,9 +69,12 @@
 }
 
 .myevents-banner {
-	/*background-image: url(../assets/img/BG_2.png);*/
+  position: relative;
+  left: 12%;
+	background-image: url(../assets/img/Banner.jpg);
+  background-repeat: no-repeat;
 	width: 100%;
-	height: 200px;
+	height: 300px;
 	margin-bottom: 20px;
   color: #594444;
 	/*color: #fff;*/

@@ -8,8 +8,8 @@ img/05-screenshot.jpg: img/05-screenshot-f84473b3b7295a457d956b85a60b33a7.jpg
 img/06-screenshot.jpg: img/06-screenshot-05f410ca131137f2566136b5a55d37ce.jpg
 img/07-screenshot.jpg: img/07-screenshot-6357ff26e9007e0830a1ea14ae671b0b.jpg
 img/08-screenshot.jpg: img/08-screenshot-6cc3d777006587f6ea8e18b7914532d7.jpg
-img/BG_2.png: img/BG_2-85916c351c0d4df5f195c167243d1b13.png
 img/BG_3.png: img/BG_3-f9272b1ef4c6d70a1333412956ca38c3.png
+img/Banner.jpg: img/Banner-95917a1dcbbf196c73ad3ce8241b641a.jpg
 img/IIMB-Logo.png: img/IIMB-Logo-fa314d429279c834a51a88bccf5b6d3e.png
 img/Login.jpg: img/Login-9917d34f103e6e29dfd61745646df3ce.jpg
 img/Screen1.png: img/Screen1-4ad1154f319108e8126e54cdb321142b.png
@@ -103,5 +103,5 @@ slider/example-slide-2.jpg: slider/example-slide-2-7f269633b6b418db0e625f44fa73b
 slider/example-slide-3.jpg: slider/example-slide-3-90dbde6e90ba1e5670600a1a0ea715dd.jpg
 slider/example-slide-4.jpg: slider/example-slide-4-7a818ffddb3078c3ef6cca13e07146fc.jpg
 application.js: application-d78c9f5abdda514dab525ed09d1954c9.js
-application.css: application-87e8127b190ea34cd4b6872f80f02701.css
+application.css: application-1786d93986d776d0f79e3013272125c4.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map
