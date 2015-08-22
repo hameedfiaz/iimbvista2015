@@ -1,0 +1,40 @@
+<div class="col-md-6" style="border:1px solid black;overflow: scroll;height:100vh;">
+	<h3>User Signups</h3>
+	<div class="well">
+		Total sign ups = <%= @total_count %>
+	</div>
+	<table border=2 width="100%">
+		<tr>
+			<th width="80%">College Name</th>
+			<th>Count</th>
+		</tr>
+		<% @college_count.each do |k,v| %>
+			<% if k != nil %>
+			<tr>
+				<td width="80%"><%= College.find(k).name %></td>
+				<td><%= v.to_i > 0 ? v : 0 %></td>
+			</tr>
+			<% end %>
+		<% end %>
+	</table>
+</div>
+<div class="col-md-6" style="border:1px solid black;overflow: scroll;height:100vh;">
+	<h3>Event Registrations</h3>
+	<div class="well">
+		Total event registrations = <%= @team_count.values.inject(&:+) %>
+	</div>
+	<table border=2 width="100%">
+		<tr>
+			<th width="80%">Event Name</th>
+			<th>Count</th>
+		</tr>
+		<% @team_count.each do |k,v| %>
+			<% if k != nil %>
+			<tr>
+				<td width="80%"><a <%= "href='/dashboard/event_registrations/#{k}'" %>><%= Event.unscoped.find(k).title %></a></td>
+				<td><%= v.to_i > 0 ? v : 0 %></td>
+			</tr>
+			<% end %>
+		<% end %>
+	</table>
+</div>

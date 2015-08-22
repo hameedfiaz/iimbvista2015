@@ -18,7 +18,11 @@ class User < ActiveRecord::Base
 
   after_create :send_welcome_mail
 
-    def send_welcome_mail
+  def self.valid_users
+    User.includes(:roles, :college).select{|user| user.roles==[]}.reject{|user| user.college.try(:name).blank?}
+  end
+
+  def send_welcome_mail
     if full_name!=email
       MyMailer.delay.thank_you(self)
     else

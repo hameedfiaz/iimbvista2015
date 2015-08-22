@@ -1,4 +1,8 @@
 Iimbvista2015::Application.routes.draw do
+  get "dashboard/index"
+  
+  get "dashboard/event_registrations/:id", :controller => "dashboard", :action => "event_registrations"
+
   resources :bulletins
 
   post "registrations/register"

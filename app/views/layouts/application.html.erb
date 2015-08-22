@@ -8,9 +8,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="col-md-12 text-right">
+<%= link_to "Go to Dashboard", dashboard_index_path, class: "btn btn-warning" %>
+</div>
 <%= yield %>
-
 <script type="text/javascript">
 tinymce.init({
     selector: "textarea",
