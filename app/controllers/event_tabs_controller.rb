@@ -102,6 +102,8 @@ class EventTabsController < ApplicationController
 
   def for_event
     event_id = params[:id]
+    event=Event.find_by_id(event_id)
+    @event_cat = event.event_category_id
     @event_tabs=EventTab.unscoped.where(event_id: event_id )
     render :template => "/event_tabs/index"
   end

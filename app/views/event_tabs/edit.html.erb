@@ -3,4 +3,4 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @event_tab %> |
-<%= link_to 'Back', event_tabs_path %>
+<%= link_to 'Back', "/event_tabs/for_event/#{@event_tab.event_id}" %>

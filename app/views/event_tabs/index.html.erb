@@ -27,3 +27,6 @@
 </div>
 
 <%= link_to 'New Event tab', new_event_tab_path, class: "btn btn-warning" %>
+<% if params[:action]="for_event" %>
+  <%= link_to 'Back to Event List', "/events/for_event_category/#{@event_cat}", class: "btn btn-warning" %>
+<% end %>
