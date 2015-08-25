@@ -22,7 +22,7 @@ class RegistrationsController < ApplicationController
   			team_list<<user if !team_list.include?(user)
   		end
   	end
- 	  check_team=Team.find_by_name(team_name)
+ 	  check_team=event.teams.collect(&:name).include?(team_name)
  	  if check_team
  		 @message="Same Team name already exists"
  	  elsif team_list.count >= event.min_per_team
