@@ -5,6 +5,7 @@ class Event < ActiveRecord::Base
 
   has_many :event_tabs
   has_many :teams
+  has_many :event_sponsors
   belongs_to :event_category
 
   def online_registration?
@@ -32,6 +33,10 @@ class Event < ActiveRecord::Base
 
   def teams_registered
   	Team.where(event_id: id).count
+  end
+
+  def sorted_event_sponsors
+    event_sponsors.order(rank: :asc)
   end
 
   def title_description

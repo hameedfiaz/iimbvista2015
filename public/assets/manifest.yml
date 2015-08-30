@@ -46,6 +46,11 @@ img/event_images/4.png: img/event_images/4-e3bb3189d13cf1dc6724c0b1bf6382fb.png
 img/event_images/5.png: img/event_images/5-fca89d40a35f02532258034e269f94f7.png
 img/event_images/8.png: img/event_images/8-c9878aa9493b522cdc315a0b6f253823.png
 img/event_images/9.png: img/event_images/9-9b3c89d483e81cfc48cbfa3715d6cab2.png
+img/event_sponsors/bt.jpg: img/event_sponsors/bt-da1d4112d84cb909ec5af6254b79ab9f.jpg
+img/event_sponsors/ntpclogo.png: img/event_sponsors/ntpclogo-96fe1844a59c0c49054590c337ade733.png
+img/event_sponsors/selogo.jpg: img/event_sponsors/selogo-2216fef8728bd8bfe246ac59c90fb6e5.jpg
+img/event_sponsors/strategy.jpg: img/event_sponsors/strategy-de7c109677f909f54588551819a4cfea.jpg
+img/event_sponsors/yesbank.png: img/event_sponsors/yesbank-cf695b50c5c14e1c1225077bba2dc14b.png
 img/fancybox_loading.gif: img/fancybox_loading-a1cca7db8e30e0d0cc08d1e7eee6ae3a.gif
 img/fancybox_loading@2x.gif: img/fancybox_loading@2x-a7d3690e6d1419776331edeb757ad693.gif
 img/fancybox_overlay.png: img/fancybox_overlay-6b1b5f8418b942ba31549e9e1ac7e24d.png
@@ -106,5 +111,5 @@ slider/example-slide-2.jpg: slider/example-slide-2-7f269633b6b418db0e625f44fa73b
 slider/example-slide-3.jpg: slider/example-slide-3-90dbde6e90ba1e5670600a1a0ea715dd.jpg
 slider/example-slide-4.jpg: slider/example-slide-4-7a818ffddb3078c3ef6cca13e07146fc.jpg
 application.js: application-d78c9f5abdda514dab525ed09d1954c9.js
-application.css: application-1786d93986d776d0f79e3013272125c4.css
+application.css: application-755275d0dccd720a27ab048f8d11364f.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map
