@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150830000021) do
+ActiveRecord::Schema.define(:version => 20150906195224) do
 
   create_table "bulletins", :force => true do |t|
     t.string   "text"
@@ -90,6 +90,8 @@ ActiveRecord::Schema.define(:version => 20150830000021) do
     t.integer  "permitted_registrations", :default => 0
     t.integer  "registration_fee",        :default => 0
     t.boolean  "flagship",                :default => false
+    t.boolean  "online_event",            :default => false
+    t.boolean  "on_the_spot_event",       :default => false
   end
 
   create_table "roles", :force => true do |t|

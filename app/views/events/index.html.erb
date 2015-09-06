@@ -29,6 +29,10 @@
         <%= event.flagship %></p>
         <p><b>Active</b><br/>
         <%= event.active %></p>
+        <p><b>Online Event</b><br/>
+        <%= event.online_event %></p>
+        <p><b>On The Spot Event</b><br/>
+        <%= event.on_the_spot_event %></p>
         <p><%= link_to 'Tabs', "/event_tabs/for_event/#{event.id}", class: "btn btn-default" %>
         <%= link_to 'Show', event, class: "btn btn-default" %>
         <%= link_to 'Edit', edit_event_path(event), class: "btn btn-default" %>

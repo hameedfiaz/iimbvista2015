@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
 	default_scope where(:active => true)
 
-  attr_accessible :title, :description, :online_registration, :active, :event_category_id, :max_per_team, :min_per_team, :deadline, :permitted_registrations, :registration_fee, :flagship
+  attr_accessible :title, :description, :online_registration, :active, :event_category_id, :max_per_team, :min_per_team, :deadline, :permitted_registrations, :registration_fee, :flagship, :online_event, :on_the_spot_event
 
   has_many :event_tabs
   has_many :teams
@@ -41,5 +41,14 @@ class Event < ActiveRecord::Base
 
   def title_description
     description.html_safe.gsub("<p>","").gsub("</p>","")
+  end
+
+  def data_group_text
+    txt = "data-groups='[\"all\",\""
+    txt+= "flagship\",\"" if flagship
+    txt+= "online\",\"" if online_event
+    txt+= "onthespot\",\"" if on_the_spot_event
+    txt+= "#{event_category_id}\"]'"
+    txt
   end
 end
