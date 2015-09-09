@@ -637,6 +637,29 @@ header i {
     padding-top: 2%;
     padding-bottom: 2%;
 }
+
+
+.full-background {
+    width: 100% !important;
+    height: 100vh !important;
+    position: relative;
+    padding: 60px 0 60px 0;
+    min-height: 800px;
+    background: rgb(40, 70, 102) url('../assets/img/acco_n_travel.png') no-repeat center center;
+    background-size: cover;
+    color: #2E0000;   
+}
+.full-background h1 {
+    margin: 200px 0 45px 0;
+    font-weight: 300;
+    font-size: 45px;
+}
+.full-background h1 span {
+    display: inline-block;
+    color: #2E0000;
+}
+
+
 /* ==========================================================================
 Video
 ========================================================================== */

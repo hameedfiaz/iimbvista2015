@@ -29,6 +29,8 @@ Iimbvista2015::Application.routes.draw do
 
   get "home/index"
 
+  get "home/acco_n_travel"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
