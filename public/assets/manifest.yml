@@ -16,6 +16,7 @@ img/Screen1.png: img/Screen1-4ad1154f319108e8126e54cdb321142b.png
 img/Screen2.png: img/Screen2-4386ff242991192e1887052247610efc.png
 img/Screen3.png: img/Screen3-6a5c4dcc00afeee631157ffecdb57c45.png
 img/Vista_Logo.png: img/Vista_Logo-96e2ac062d983360ca6c1eb2bc98c2eb.png
+img/acco_n_travel.png: img/acco_n_travel-0f1fb79240383001f7688d2d1a6f3004.png
 img/avatar.jpg: img/avatar-789a40e14df794efec2fe67a1b66cceb.jpg
 img/avatar.png: img/avatar-c14be503bc629d324cd2fb53f0245702.png
 img/avatar@2x.png: img/avatar@2x-daf3aee1b5cf63e5c4b00366085f9410.png
@@ -64,6 +65,7 @@ img/event_images/8.png: img/event_images/8-c9878aa9493b522cdc315a0b6f253823.png
 img/event_images/9.png: img/event_images/9-9b3c89d483e81cfc48cbfa3715d6cab2.png
 img/event_sponsors/bt.jpg: img/event_sponsors/bt-da1d4112d84cb909ec5af6254b79ab9f.jpg
 img/event_sponsors/ntpclogo.png: img/event_sponsors/ntpclogo-96fe1844a59c0c49054590c337ade733.png
+img/event_sponsors/prozenelogo.png: img/event_sponsors/prozenelogo-d6534429c4b32d00792692995e507aad.png
 img/event_sponsors/selogo.jpg: img/event_sponsors/selogo-2216fef8728bd8bfe246ac59c90fb6e5.jpg
 img/event_sponsors/strategy.jpg: img/event_sponsors/strategy-de7c109677f909f54588551819a4cfea.jpg
 img/event_sponsors/transparent_strategy.gif: img/event_sponsors/transparent_strategy-9b4121c717be1dbcfb6b4b8faba1a6e4.gif
@@ -130,5 +132,5 @@ slider/example-slide-2.jpg: slider/example-slide-2-7f269633b6b418db0e625f44fa73b
 slider/example-slide-3.jpg: slider/example-slide-3-90dbde6e90ba1e5670600a1a0ea715dd.jpg
 slider/example-slide-4.jpg: slider/example-slide-4-7a818ffddb3078c3ef6cca13e07146fc.jpg
 application.js: application-d78c9f5abdda514dab525ed09d1954c9.js
-application.css: application-755275d0dccd720a27ab048f8d11364f.css
+application.css: application-06ea38494a64b6ebe44dbec934b23bc9.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map
