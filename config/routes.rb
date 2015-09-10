@@ -3,6 +3,8 @@ Iimbvista2015::Application.routes.draw do
   
   get "dashboard/event_registrations/:id", :controller => "dashboard", :action => "event_registrations"
 
+  get "dashboard/college_registrations/:id", :controller => "dashboard", :action => "college_registrations"
+
   resources :bulletins
 
   post "registrations/register"

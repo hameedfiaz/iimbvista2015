@@ -21,4 +21,10 @@ class DashboardController < ApplicationController
   	@event=Event.unscoped.find_by_id(event_id)
   	@registrations_count=@event.teams.collect(&:users).count
   end
+
+  def college_registrations
+    college_id=params[:id]
+    @college=College.find_by_id(college_id)
+    @users=@college.users
+  end
 end

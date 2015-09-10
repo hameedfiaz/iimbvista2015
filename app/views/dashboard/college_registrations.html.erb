@@ -1,0 +1,22 @@
+<div class="col-md-12" style="border:1px solid black;overflow: scroll;height:100vh;">
+	<h3>College Registrations : </h3><h1><%= @college.name %></h1>
+	<div class="well">
+		Total User Registrations = <%= @users.count %>
+	</div>
+	<table border=2 width="100%">
+		<tr>
+			<th width="30%">Full Name</th>
+			<th width="30%">Email</th>
+			<th width="20%">Phone</th>
+		</tr>
+			<% @users.each do |user| %>
+				<tr>
+					<td width="40%"><%= user.full_name %></td>
+					<td width="30%"><%= user.email %></td>
+					<td width="30%"><%= user.phone %></td>
+				</tr>
+			<% end %>
+	</table>
+	<br/><br/>
+	<%= link_to "Back", dashboard_index_path %>
+</div>

@@ -11,7 +11,7 @@
 		<% @college_count.each do |k,v| %>
 			<% if k != nil %>
 			<tr>
-				<td width="80%"><%= College.find(k).name %></td>
+				<td width="80%"><a <%= "href='/dashboard/college_registrations/#{k}'" %>><%= College.find(k).name %></td>
 				<td><%= v.to_i > 0 ? v : 0 %></td>
 			</tr>
 			<% end %>
