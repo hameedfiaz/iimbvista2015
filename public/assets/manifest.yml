@@ -127,6 +127,7 @@ img/showcase-bg-fixed-01.jpg: img/showcase-bg-fixed-01-a8e8e54f1bddcafac34858037
 img/showcase-bg-fixed.jpg: img/showcase-bg-fixed-bbf48baa3754b87a540f41d2a7f652cc.jpg
 img/showcase-bg-fixed.png: img/showcase-bg-fixed-a5dda082235b3c94e9c8e551b49705db.png
 img/showcase-bg.jpg: img/showcase-bg-442027314f4ab6b1ffa387a085ce86dd.jpg
+img/speakers/msa.jpg: img/speakers/msa-5243d197c4194103eb0cee01c29364d9.jpg
 img/vista-2015-logo.gif: img/vista-2015-logo-869ced82b20746ba8e445ed83b114166.gif
 img/vista-2015-logo.jpg: img/vista-2015-logo-cd5af49e50bac4c027b3190225eeab70.jpg
 img/vista-text.png: img/vista-text-91dcd8a4f08c58620dddb41b47042d79.png
@@ -135,6 +136,6 @@ slider/example-slide-1.jpg: slider/example-slide-1-851429e3aa20cfa22538c90c964d0
 slider/example-slide-2.jpg: slider/example-slide-2-7f269633b6b418db0e625f44fa73b649.jpg
 slider/example-slide-3.jpg: slider/example-slide-3-90dbde6e90ba1e5670600a1a0ea715dd.jpg
 slider/example-slide-4.jpg: slider/example-slide-4-7a818ffddb3078c3ef6cca13e07146fc.jpg
-application.js: application-d78c9f5abdda514dab525ed09d1954c9.js
+application.js: application-2ef24e22d5da9bde4087ab64543ff9e3.js
 application.css: application-06ea38494a64b6ebe44dbec934b23bc9.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map

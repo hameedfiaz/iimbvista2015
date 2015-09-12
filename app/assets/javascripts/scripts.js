@@ -28,9 +28,9 @@ $(document).ready(function() {
 	$('#featuresSlider').flickity({
 		cellAlign: 'left',
 		contain: true,
-		prevNextButtons: false,
+		prevNextButtons: true,
 		autoPlay: true,
-		autoPlay: 3000
+		autoPlay: 1
 	});
 
 	$('#showcaseSlider').flickity({
