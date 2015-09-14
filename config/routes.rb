@@ -1,4 +1,6 @@
 Iimbvista2015::Application.routes.draw do
+  match "api/auth_user"
+
   get "dashboard/index"
   
   get "dashboard/event_registrations/:id", :controller => "dashboard", :action => "event_registrations"
