@@ -753,7 +753,7 @@ Features Slider
     padding: 0;
 }
 .features-slider .flickity-page-dots {
-    text-align: left;
+    text-align: center;
     margin-top: 50px;
     position: static;
 }

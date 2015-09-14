@@ -74,6 +74,7 @@ img/event_sponsors/selogo.jpg: img/event_sponsors/selogo-2216fef8728bd8bfe246ac5
 img/event_sponsors/strategy.jpg: img/event_sponsors/strategy-de7c109677f909f54588551819a4cfea.jpg
 img/event_sponsors/transparent_strategy.gif: img/event_sponsors/transparent_strategy-9b4121c717be1dbcfb6b4b8faba1a6e4.gif
 img/event_sponsors/treebo.png: img/event_sponsors/treebo-9d32cb76d388878d2b08a6b078d6dec9.png
+img/event_sponsors/ullogo.jpg: img/event_sponsors/ullogo-46d7ddc93bea0407e9a657c4334a4ab2.jpg
 img/event_sponsors/upgrad.png: img/event_sponsors/upgrad-71a2cf9485e5da7f44cae31ab47ddb3c.png
 img/event_sponsors/yesbank.png: img/event_sponsors/yesbank-cf695b50c5c14e1c1225077bba2dc14b.png
 img/event_sponsors/zoomcarlogo.jpg: img/event_sponsors/zoomcarlogo-b54984b08fa37165da8f11b76aa805f9.jpg
@@ -130,6 +131,7 @@ img/showcase-bg-fixed.jpg: img/showcase-bg-fixed-bbf48baa3754b87a540f41d2a7f652c
 img/showcase-bg-fixed.png: img/showcase-bg-fixed-a5dda082235b3c94e9c8e551b49705db.png
 img/showcase-bg.jpg: img/showcase-bg-442027314f4ab6b1ffa387a085ce86dd.jpg
 img/speakers/msa.jpg: img/speakers/msa-5243d197c4194103eb0cee01c29364d9.jpg
+img/speakers/srk.jpg: img/speakers/srk-625441d01ff9a5dd67e0c9d014563653.jpg
 img/vista-2015-logo.gif: img/vista-2015-logo-869ced82b20746ba8e445ed83b114166.gif
 img/vista-2015-logo.jpg: img/vista-2015-logo-cd5af49e50bac4c027b3190225eeab70.jpg
 img/vista-text.png: img/vista-text-91dcd8a4f08c58620dddb41b47042d79.png
@@ -138,6 +140,6 @@ slider/example-slide-1.jpg: slider/example-slide-1-851429e3aa20cfa22538c90c964d0
 slider/example-slide-2.jpg: slider/example-slide-2-7f269633b6b418db0e625f44fa73b649.jpg
 slider/example-slide-3.jpg: slider/example-slide-3-90dbde6e90ba1e5670600a1a0ea715dd.jpg
 slider/example-slide-4.jpg: slider/example-slide-4-7a818ffddb3078c3ef6cca13e07146fc.jpg
-application.js: application-2ef24e22d5da9bde4087ab64543ff9e3.js
-application.css: application-06ea38494a64b6ebe44dbec934b23bc9.css
+application.js: application-9136c9704bae993ba041cd4d758bd176.js
+application.css: application-b0a1c5ba015703b0f1f1d2630c1f35df.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map

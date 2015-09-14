@@ -25,13 +25,7 @@ $(document).ready(function() {
 
 	/***************** Flickity ******************/
 
-	$('#featuresSlider').flickity({
-		cellAlign: 'left',
-		contain: true,
-		prevNextButtons: true,
-		autoPlay: true,
-		autoPlay: 1
-	});
+
 
 	$('#showcaseSlider').flickity({
 		cellAlign: 'left',
