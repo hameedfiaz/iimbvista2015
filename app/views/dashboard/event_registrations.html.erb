@@ -14,9 +14,11 @@
 			<% team.users.each do |user| %>
 				<tr>
 					<td width="20%"><%= team.name %></td>
-					<td width="30%"><%= user.full_name %></td>
-					<td width="30%"><%= user.email %></td>
-					<td width="20%"><%= user.phone %></td>
+					<td width="25%"><%= user.full_name %></td>
+					<td width="25%"><%= user.email %></td>
+					<td width="25%"><%= user.phone %></td>
+					<td width="15%"><%= user.college.try(:name) %></td>
+
 				</tr>
 			<% end %>
 		<% end %>
