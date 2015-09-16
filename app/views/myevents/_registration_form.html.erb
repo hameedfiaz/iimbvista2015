@@ -1,6 +1,10 @@
 <%= form_tag('/registrations/register') do %>
 <%= hidden_field_tag "event_id", @event.id %>
+<% if @event.id==51 %>
+<label for="team_name" class="control-label">User Name for Labyrinth</label>
+<% else %>
 <label for="team_name" class="control-label">Team Name</label>
+<% end %>
 <input type="text" class="form-control" name="team_name" id="team_name"/>
 <% @event.max_per_team.times do |i| %>
 <% if i==0 %>
