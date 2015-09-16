@@ -1,11 +1,11 @@
 Iimbvista2015::Application.routes.draw do
-  # get "shop_at_vista/index"
+  get "shop_at_vista/index"
 
-  # get "shop_at_vista/product_info/:id", :controller => "shop_at_vista", :action => "product_info"
+  get "shop_at_vista/product_info/:id", :controller => "shop_at_vista", :action => "product_info"
  
-  # get "shop_at_vista/add_to_cart"
+  get "shop_at_vista/add_to_cart"
   
-  # get "shop_at_vista/remove_from_cart"
+  get "shop_at_vista/remove_from_cart"
   
   get "api/auth_user"
 

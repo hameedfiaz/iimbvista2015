@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150906195224) do
+ActiveRecord::Schema.define(:version => 20150916173302) do
 
   create_table "bulletins", :force => true do |t|
     t.string   "text"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(:version => 20150906195224) do
     t.string   "link_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "carts", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "carts_items", :id => false, :force => true do |t|
+    t.integer "cart_id"
+    t.integer "item_id"
   end
 
   create_table "colleges", :force => true do |t|
@@ -92,6 +103,37 @@ ActiveRecord::Schema.define(:version => 20150906195224) do
     t.boolean  "flagship",                :default => false
     t.boolean  "online_event",            :default => false
     t.boolean  "on_the_spot_event",       :default => false
+  end
+
+  create_table "items", :force => true do |t|
+    t.string   "sku"
+    t.integer  "product_id"
+    t.decimal  "price",      :precision => 8, :scale => 2
+    t.string   "item_desc"
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
+  end
+
+  create_table "order_items", :force => true do |t|
+    t.integer  "order_id"
+    t.integer  "item_id"
+    t.integer  "quantity"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "orders", :force => true do |t|
+    t.integer  "user_id"
+    t.decimal  "total_amount", :precision => 8, :scale => 2
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "roles", :force => true do |t|

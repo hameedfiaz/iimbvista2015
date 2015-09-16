@@ -1,0 +1,22 @@
+<div class="well">
+	<div class="panel-heading"><h1>Shop @ Vista '15</h1><br/>Click on any item that you are interested in...</div>
+	<center>
+		<div class="filter-options btn-group">
+			<center>
+				<button <%= "data-group='all'" %> class="btn btn-custom filter_btn">All</button>
+				<% @products.each do |product| %>
+				<button <%= "data-group='#{product.id}'" %> class="btn btn-custom filter_btn"><%= product.name %></button>
+				<% end %>
+			</center>
+		</div>
+	</center>
+	<div id="grid" class="shuffle--images row-fluid images-loaded shuffle">
+	<% @products.each do |product| %>
+		<% if product %>
+		<div class="item col-md-3" <%= "data-title='#{product.name}'" %> <%= "data-groups=['#{product.id}']" %>>
+			<a <%= "href='/shop_at_vista/product_info/#{product.id}'" %>><img class="pic-title" <%= "title='#{product.id}'" %> <%= "src='/assets/img/shopatvista/#{product.id}.jpg'" %> style="max-width:100%;max-height:100%;height:150px;" /></a>
+		</div>
+		<% end %>
+		<% end %>
+	</div>
+</div>
