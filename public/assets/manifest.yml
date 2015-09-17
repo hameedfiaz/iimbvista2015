@@ -51,8 +51,11 @@ img/event_images/55.png: img/event_images/55-097dfa863a0e1e08fd7f5e222d922906.pn
 img/event_images/56.png: img/event_images/56-71303a7853dd761fd58edd82cf5fc274.png
 img/event_images/8.png: img/event_images/8-c9878aa9493b522cdc315a0b6f253823.png
 img/event_images/9.png: img/event_images/9-9b3c89d483e81cfc48cbfa3715d6cab2.png
+img/event_sponsors/airindia.jpg: img/event_sponsors/airindia-c8949d703cc4206ec727399c13d9a37d.jpg
 img/event_sponsors/ants.jpg: img/event_sponsors/ants-4b7859ed189193b781c37a97df49d3c7.jpg
+img/event_sponsors/bpcl.jpg: img/event_sponsors/bpcl-46fdc5c62268e58053b8bd588bb49031.jpg
 img/event_sponsors/bt.jpg: img/event_sponsors/bt-da1d4112d84cb909ec5af6254b79ab9f.jpg
+img/event_sponsors/cognizant.png: img/event_sponsors/cognizant-32d29c795c6c4569a9161057ee00594d.png
 img/event_sponsors/instamojo.png: img/event_sponsors/instamojo-a2491f42e23454ddbed1977ef19ae510.png
 img/event_sponsors/justridelogo.png: img/event_sponsors/justridelogo-4ec0e467d805aaad875875755c600b11.png
 img/event_sponsors/ntpclogo.png: img/event_sponsors/ntpclogo-96fe1844a59c0c49054590c337ade733.png
@@ -65,6 +68,7 @@ img/event_sponsors/treebo.png: img/event_sponsors/treebo-9d32cb76d388878d2b08a6b
 img/event_sponsors/ullogo.jpg: img/event_sponsors/ullogo-46d7ddc93bea0407e9a657c4334a4ab2.jpg
 img/event_sponsors/upgrad.png: img/event_sponsors/upgrad-71a2cf9485e5da7f44cae31ab47ddb3c.png
 img/event_sponsors/yesbank.png: img/event_sponsors/yesbank-cf695b50c5c14e1c1225077bba2dc14b.png
+img/event_sponsors/yourdost.png: img/event_sponsors/yourdost-19c9c39291618e3b91616438f61cf69e.png
 img/event_sponsors/zoomcarlogo.jpg: img/event_sponsors/zoomcarlogo-b54984b08fa37165da8f11b76aa805f9.jpg
 img/fancybox_loading.gif: img/fancybox_loading-a1cca7db8e30e0d0cc08d1e7eee6ae3a.gif
 img/fancybox_loading@2x.gif: img/fancybox_loading@2x-a7d3690e6d1419776331edeb757ad693.gif
