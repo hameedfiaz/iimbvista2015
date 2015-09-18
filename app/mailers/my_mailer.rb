@@ -38,7 +38,7 @@ class MyMailer < Devise::Mailer
     attachments.inline['header.png'] = File.read("#{Rails.root}/app/assets/images/img/mail_header.png")
     attachments.inline['srk.jpg'] = File.read("#{Rails.root}/public/srk.jpg")
     attachments.inline['rs.jpg'] = File.read("#{Rails.root}/public/rs.jpg")
-    mail(:from => "vista@iimb.ernet.in", :to => email, :subject => "IIM Bangalore's VISTA: Launching Labyrinth: Online Treasure hunt")
+    mail(:from => "vista@iimb.ernet.in", :to => email, :subject => "IIM Bangalore's Vista: Presenting Keynote Speakers Siddharth Roy Kapur and Rajdeep Sardesai!")
   end
 
   def launch_mailer_third(email)
