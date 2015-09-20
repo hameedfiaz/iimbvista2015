@@ -1,6 +1,8 @@
 ---
 fontawesome-webfont.ttf: fontawesome-webfont-2c1ff1e84875e92a073d3ef23c886b1b.ttf
 img/BG_3.png: img/BG_3-f9272b1ef4c6d70a1333412956ca38c3.png
+img/BG_Elephant.png: img/BG_Elephant-ac7f08e595ece2771e3526d3188a5b5a.png
+img/BG_Final.jpg: img/BG_Final-de998e88c81d89448b27990d88e4ca47.jpg
 img/Banner.jpg: img/Banner-95917a1dcbbf196c73ad3ce8241b641a.jpg
 img/IIMB-Logo.png: img/IIMB-Logo-fa314d429279c834a51a88bccf5b6d3e.png
 img/Login.jpg: img/Login-9917d34f103e6e29dfd61745646df3ce.jpg
@@ -114,5 +116,5 @@ img/vista-2015-logo.gif: img/vista-2015-logo-869ced82b20746ba8e445ed83b114166.gi
 img/vista-2015-logo.jpg: img/vista-2015-logo-cd5af49e50bac4c027b3190225eeab70.jpg
 img/vista-text.png: img/vista-text-91dcd8a4f08c58620dddb41b47042d79.png
 application.js: application-c76c0421d9093a700d83752e4a123f1e.js
-application.css: application-b0a1c5ba015703b0f1f1d2630c1f35df.css
+application.css: application-442cd15644c8d8e8146299faaf3b6fc2.css
 jquery.min.map: jquery.min-d93a81e507ba322a0f516e145a74d86d.map
