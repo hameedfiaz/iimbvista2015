@@ -1,8 +1,12 @@
 development:
+    api_key: api_key_goes_here
+    api_token: api_token_goes_here
     # add stuff here to override defaults.
 
 test:
+    api_key: api_key_goes_here
+    api_token: api_token_goes_here
 
 production:
-	api_key: "api_key_goes_here"
-	api_token: "api_token_goes_here"
+    api_key: api_key_goes_here
+    api_token: api_token_goes_here"
