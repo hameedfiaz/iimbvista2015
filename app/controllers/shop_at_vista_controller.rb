@@ -55,8 +55,10 @@ class ShopAtVistaController < ApplicationController
 
   def payment_success
     Rails.logger.info "#{params.inspect}"
-    @pars=params
-    current_user.touch
+    @pars=params.to_s
+    p=Product.first
+    p.description=@pars
+    p.save!
   end
 
   private
@@ -76,7 +78,7 @@ class ShopAtVistaController < ApplicationController
     req = Net::HTTP::Post.new(url.path)
     req.add_field("X-Api-Key", IMJ_CONFIG["api_key"])
     req.add_field("X-Auth-Token", IMJ_CONFIG["api_token"])
-    req.set_form_data({"description"=>"This is an example link.","base_price"=>"0.00","currency"=>"INR","title"=>"Hello API","redirect_url"=>"http://www.iimb-vista.com","webhoook_url"=>"http://www.iimb-vista.com/shop_at_vista/payment_success/"})
+    req.set_form_data({"description"=>"This is an example link.","base_price"=>"0.00","currency"=>"INR","title"=>"Hello API","redirect_url"=>"http://www.iimb-vista.com","webhook_url"=>"http://www.iimb-vista.com/shop_at_vista/payment_success/"})
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl=true
     resp=http.request(req)
