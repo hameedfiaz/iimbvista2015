@@ -71,6 +71,11 @@ class ShopAtVistaController < ApplicationController
     resp=http.request(req)
   end
 
+  def payment_complete
+    @payment_id=params["payment_id"]
+    @status=params["status"]
+  end
+
   private
 
   def instamojo_login
