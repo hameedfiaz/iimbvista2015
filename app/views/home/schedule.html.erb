@@ -42,16 +42,12 @@
   </nav>
 
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="container-fluid filter full-background">
-          <div class="row-fluid well">
-          <div>
-
+    <div class="row well">
+    <h1> Vista '15 Full Schedule </h1>
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
     <% @days.each_with_index do |d,i| %>
-      <li role="presentation"><a <%= "href='#tab_#{i}'" %> <%= "aria-controls='tab_#{i}'" %> role="tab" data-toggle="tab"><%= d.strftime('%a, %d %b %Y') %></a></li>
+      <li role="presentation" <%= "class='active'" if i==0 %>><a <%= "href='#tab_#{i}'" %> <%= "aria-controls='tab_#{i}'" %> role="tab" data-toggle="tab"><%= d.strftime('%a, %d %b %Y') %></a></li>
     <% end %>
   </ul>
 
@@ -82,9 +78,7 @@
 
 </div>
           </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 </body>
 </html>
