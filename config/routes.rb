@@ -5,6 +5,8 @@ Iimbvista2015::Application.routes.draw do
 
   get "shop_at_vista/checkout"
 
+  get "shop_at_vista/payment_complete"
+
   post "shop_at_vista/payment_success"
 
   get "shop_at_vista/product_info/:id", :controller => "shop_at_vista", :action => "product_info"
