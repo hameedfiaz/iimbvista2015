@@ -16,6 +16,9 @@
 	<strong>
 	Total : <div class="pull-right"><%= @cart.items.empty? ? "0.00" : @cart.items.collect(&:price).inject(:+).round(2) %></div>
 	</strong>
+	<br/>
+	<br/>
+	<% if @cart.items.present? %><a href="/shop_at_vista/checkout" class="btn btn-success btn-large"><i class="icon-white icon-heart"></i> Checkout with Instamojo</a><% end %>
 </div>
 <script type="text/javascript">
 function removeFromCart(item_id, cid) {
@@ -28,6 +31,7 @@ $.ajax({
   },
   success: function(data){
   	alert(data);
+  	location.reload();
   }
 });
 }

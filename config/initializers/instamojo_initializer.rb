@@ -1,0 +1,1 @@
+IMJ_CONFIG = YAML.load_file("#{Rails.root}/config/instamojo_config.yml")[Rails.env]

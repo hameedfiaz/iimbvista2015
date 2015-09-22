@@ -42,4 +42,44 @@ class ShopAtVistaController < ApplicationController
   end
   render :text=>"Removed from cart successfully" and return
   end
+
+  def checkout
+    if user_signed_in? && current_user.cart.items.present?
+      resp=instamojo_login
+      resp=instamojo_create_payment_link
+      redirect_to JSON.parse(resp.read_body)["link"]["url"]+current_user.data_for_instamojo
+    else
+      redirect_to root_path
+    end
+  end
+
+  def payment_success
+    Rails.logger.info "#{params.inspect}"
+    @pars=params
+    current_user.touch
+  end
+
+  private
+
+  def instamojo_login
+    url = URI.parse("https://www.instamojo.com/api/1.1/tokens/")
+    req = Net::HTTP::Get.new(url.path)
+    req.add_field("X-Api-Key", IMJ_CONFIG["api_key"])
+    req.add_field("X-Auth-Token", IMJ_CONFIG["api_token"])
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl=true
+    resp=http.request(req)
+  end
+
+  def instamojo_create_payment_link
+    url = URI.parse("https://www.instamojo.com/api/1.1/links/")
+    req = Net::HTTP::Post.new(url.path)
+    req.add_field("X-Api-Key", IMJ_CONFIG["api_key"])
+    req.add_field("X-Auth-Token", IMJ_CONFIG["api_token"])
+    req.set_form_data({"description"=>"This is an example link.","base_price"=>"0.00","currency"=>"INR","title"=>"Hello API","redirect_url"=>"http://www.iimb-vista.com","webhoook_url"=>"http://www.iimb-vista.com/shop_at_vista/payment_success/"})
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl=true
+    resp=http.request(req)
+  end
+
 end

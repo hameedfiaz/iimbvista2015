@@ -1,0 +1,8 @@
+development:
+    # add stuff here to override defaults.
+
+test:
+
+production:
+	api_key: "api_key_goes_here"
+	api_token: "api_token_goes_here"
