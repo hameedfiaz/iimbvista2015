@@ -56,7 +56,7 @@ class ShopAtVistaController < ApplicationController
   def payment_success
     @pars=params
     order=Order.new
-    order.user=User.find_by_email(@pars["buyer"])
+    order.user=user=User.find_by_email(@pars["buyer"])
     order.total_amount=@pars["amount"]
     order.order_id=@pars["payment_id"]
     order.cart_amount=@pars["amount"]
