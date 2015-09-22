@@ -59,16 +59,17 @@ class ShopAtVistaController < ApplicationController
     order.user=user=User.find_by_email(@pars["buyer"])
     order.total_amount=@pars["amount"]
     order.order_id=@pars["payment_id"]
+    offer_slug=@pars["offer_slug"]
     order.cart_amount=user.cart.items.collect(&:price).inject(:+).round(2)
     order.save!
-    user.cart.destroy
-    url = URI.parse("https://www.instamojo.com/api/1.1/links/hello-api-55822/")
+    url = URI.parse("https://www.instamojo.com/api/1.1/links/#{offer_slug}/")
     req = Net::HTTP::Delete.new(url.path)
     req.add_field("X-Api-Key", IMJ_CONFIG["api_key"])
     req.add_field("X-Auth-Token", IMJ_CONFIG["api_token"])
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl=true
     resp=http.request(req)
+    user.cart.destroy
   end
 
   def payment_complete
