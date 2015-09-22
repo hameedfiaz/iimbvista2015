@@ -61,8 +61,14 @@ class ShopAtVistaController < ApplicationController
     order.order_id=@pars["payment_id"]
     order.cart_amount=@pars["amount"]
     order.save!
-    user.cart.destroy!
-    user.save!
+    user.cart.destroy
+    url = URI.parse("https://www.instamojo.com/api/1.1/links/hello-api-55822/")
+    req = Net::HTTP::Delete.new(url.path)
+    req.add_field("X-Api-Key", IMJ_CONFIG["api_key"])
+    req.add_field("X-Auth-Token", IMJ_CONFIG["api_token"])
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl=true
+    resp=http.request(req)
   end
 
   private
@@ -82,7 +88,7 @@ class ShopAtVistaController < ApplicationController
     req = Net::HTTP::Post.new(url.path)
     req.add_field("X-Api-Key", IMJ_CONFIG["api_key"])
     req.add_field("X-Auth-Token", IMJ_CONFIG["api_token"])
-    req.set_form_data({"description"=>"This is an example link.","base_price"=>"0.00","currency"=>"INR","title"=>"Hello API","redirect_url"=>"http://www.iimb-vista.com","webhook_url"=>"http://www.iimb-vista.com/shop_at_vista/payment_success/"})
+    req.set_form_data({"description"=>"Vista 2015 Payment Link - Supported by Instamojo","base_price"=>"0.00","currency"=>"INR","title"=>"Shop At Vista","redirect_url"=>"http://iimb-vista.com","webhook_url"=>"http://iimb-vista.com/shop_at_vista/payment_success/"})
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl=true
     resp=http.request(req)
