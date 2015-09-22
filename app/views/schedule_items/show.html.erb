@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @schedule_item.description %>
+</p>
+
+<p>
+  <b>Event start:</b>
+  <%= @schedule_item.event_start.strftime("%d-%m-%Y %I:%M%p") %>
+</p>
+
+<p>
+  <b>Event end:</b>
+  <%= @schedule_item.event_end.strftime("%d-%m-%Y %I:%M%p") %>
+</p>
+
+<p>
+  <b>Venue:</b>
+  <%= @schedule_item.venue %>
+</p>
+
+
+<%= link_to 'Edit', edit_schedule_item_path(@schedule_item) %> |
+<%= link_to 'Back', schedule_items_path %>

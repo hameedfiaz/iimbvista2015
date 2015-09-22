@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VISTA '15 - Full Schedule</title>
+  <meta name="description" content="The Annual International Business Summit at IIM Bangalore" />
+  <meta name="keywords" content="iimb-vista, vista2015, vista15, iimb-vista, vista, iimb-fii, web vista'15" />
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header" style="background-color:white;">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/" style="padding-top: 2px; padding-bottom: 2px;">
+          <img src="/assets/img/Vista_Logo.png" style="max-height:100%;" />
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li><a class="btn" href="#">Shop @ Vista</a></li> -->
+          <% if user_signed_in? %>
+          <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+          <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="container-fluid filter full-background">
+          <div class="row-fluid well">
+          <div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <% @days.each_with_index do |d,i| %>
+      <li role="presentation"><a <%= "href='#tab_#{i}'" %> <%= "aria-controls='tab_#{i}'" %> role="tab" data-toggle="tab"><%= d.strftime('%a, %d %b %Y') %></a></li>
+    <% end %>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <% @days.each_with_index do |d,i| %>
+      <div role="tabpanel" <%= i==0 ? "class='tab-pane active'" : "class='tab-pane'" %> <%= "id='tab_#{i}'" %>>
+        <table border=1 width="100%" class="table table-striped">
+        <tr>
+          <th width="10%">S.no</th>
+          <th width="45%">Event Name</th>
+          <th width="30%">Time</th>
+          <th width="15%">Venue</th>
+        </tr>
+        <% @schedule_items.select{|z| z.event_start.to_date==d}.each_with_index do |si,ii| %>
+        <tr>
+          <td><%= ii+1 %></td>
+          <td><%= si.description %></td>
+          <td><%= si.event_start.strftime("%I:%M%p") %> - <%= si.event_end.strftime("%I:%M%p") %></td>
+          <td><%= si.venue %></td>
+        </tr>
+        <% end %>
+        </table>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

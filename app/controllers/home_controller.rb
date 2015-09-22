@@ -6,4 +6,9 @@ class HomeController < ApplicationController
 
   def acco_n_travel
   end
+
+  def schedule
+  	@schedule_items=ScheduleItem.all
+  	@days=@schedule_items.collect(&:event_start).collect(&:to_date)
+  end
 end

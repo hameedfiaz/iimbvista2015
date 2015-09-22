@@ -1,4 +1,6 @@
 Iimbvista2015::Application.routes.draw do
+  resources :schedule_items
+
   get "shop_at_vista/index"
 
   get "shop_at_vista/product_info/:id", :controller => "shop_at_vista", :action => "product_info"
@@ -42,6 +44,8 @@ Iimbvista2015::Application.routes.draw do
   get "home/index"
 
   get "home/acco_n_travel"
+
+  get "home/schedule"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
