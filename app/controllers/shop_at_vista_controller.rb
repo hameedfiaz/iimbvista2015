@@ -54,7 +54,7 @@ class ShopAtVistaController < ApplicationController
   end
 
   def payment_success
-    @pars=params.to_s
+    @pars=params
     order=Order.new
     order.user=User.find_by_email(@pars["buyer"])
     order.total_amount=@pars["amount"]
