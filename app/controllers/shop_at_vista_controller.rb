@@ -54,11 +54,15 @@ class ShopAtVistaController < ApplicationController
   end
 
   def payment_success
-    Rails.logger.info "#{params.inspect}"
     @pars=params.to_s
-    p=Product.first
-    p.description=@pars
-    p.save!
+    order=Order.new
+    order.user=User.find_by_email(@pars["buyer"])
+    order.total_amount=@pars["amount"]
+    order.order_id=@pars["payment_id"]
+    order.cart_amount=@pars["amount"]
+    order.save!
+    user.cart.destroy!
+    user.save!
   end
 
   private
