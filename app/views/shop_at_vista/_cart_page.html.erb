@@ -1,24 +1,29 @@
 <div class="well">
-	<strong>My Cart ( Rs.<%= @cart.items.empty? ? "0.00" : @cart.items.collect(&:price).inject(:+).round(2) %> )</strong><br/></br/><br/>
-	<% @cart.items.group_by(&:id).each do |k,v| %>
-	 <div class="pull-left">
-	 <%= v.first.product.name %><br/>
-	 <%= link_to_function "Remove","removeFromCart(#{v.first.id},#{current_user.id})" %>
-	 </div>
-	 <div class="pull-right">
-	 <%= v.collect(&:price).inject(:+).round(2) %>
-	 </div>
-	 <br/>
-	 <br/>
-	 <br/>
+	<% if @cart && @cart.items %>
+		<strong>My Cart ( Rs.<%= @cart.items.empty? ? "0.00" : @cart.items.collect(&:price).inject(:+).round(2) %> )</strong><br/></br/><br/>
+		<% @cart.items.group_by(&:id).each do |k,v| %>
+		 <div class="pull-left">
+		 <%= v.first.product.name %><br/>
+		 <%= link_to_function "Remove","removeFromCart(#{v.first.id},#{current_user.id})" %>
+		 </div>
+		 <div class="pull-right">
+		 <%= v.collect(&:price).inject(:+).round(2) %>
+		 </div>
+		 <br/>
+		 <br/>
+		 <br/>
+		<% end %>
+		<br/><br/><br/>
+		<strong>
+		Total : <div class="pull-right"><%= @cart.items.empty? ? "0.00" : @cart.items.collect(&:price).inject(:+).round(2) %></div>
+		</strong>
+		<% if @cart.items.present? %><a href="/shop_at_vista/checkout" class="btn btn-success btn-large"><i class="icon-white icon-heart"></i> Checkout with Instamojo</a><% end %>
+		
+	<% else %>
+		<strong>My Cart ( Rs. 0.00 )</strong><br/></br/><br/>
 	<% end %>
-	<br/><br/><br/>
-	<strong>
-	Total : <div class="pull-right"><%= @cart.items.empty? ? "0.00" : @cart.items.collect(&:price).inject(:+).round(2) %></div>
-	</strong>
 	<br/>
 	<br/>
-	<% if @cart.items.present? %><a href="/shop_at_vista/checkout" class="btn btn-success btn-large"><i class="icon-white icon-heart"></i> Checkout with Instamojo</a><% end %>
 </div>
 <script type="text/javascript">
 function removeFromCart(item_id, cid) {
