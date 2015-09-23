@@ -25,5 +25,6 @@ class Cart < ActiveRecord::Base
 			order_item.quantity=quantity
 			order_item.save!
 		end
+		order
 	end
 end
