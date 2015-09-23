@@ -13,9 +13,12 @@
 		 <br/>
 		 <br/>
 		<% end %>
+		<br/><br/>
+		<strong>Offer: <div class="pull-right"><%= @cart.offer_amount %></div></strong>
 		<br/><br/><br/>
 		<strong>
-		Total : <div class="pull-right"><%= @cart.items.empty? ? "0.00" : @cart.items.collect(&:price).inject(:+).round(2) %></div>
+		<% final_amount = ((@cart.items.empty? ? "0.00" : @cart.items.collect(&:price).inject(:+).round(2))-@cart.offer_amount) %>
+		Total : <div class="pull-right"><%= final_amount>0 ? final_amount : 0 %></div>
 		</strong>
 		<% if @cart.items.present? %><a href="/shop_at_vista/checkout" class="btn btn-success btn-large"><i class="icon-white icon-heart"></i> Checkout with Instamojo</a><% end %>
 		

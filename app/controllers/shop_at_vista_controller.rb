@@ -97,7 +97,7 @@ class ShopAtVistaController < ApplicationController
     req = Net::HTTP::Post.new(url.path)
     req.add_field("X-Api-Key", IMJ_CONFIG["api_key"])
     req.add_field("X-Auth-Token", IMJ_CONFIG["api_token"])
-    req.set_form_data({"description"=>"Vista 2015 Payment Link - Supported by Instamojo","base_price"=>user.cart.items.collect(&:price).inject(:+).round(2),"currency"=>"INR","title"=>"Shop At Vista","redirect_url"=>"http://iimb-vista.com/shop_at_vista/payment_complete","webhook_url"=>"http://iimb-vista.com/shop_at_vista/payment_success/"})
+    req.set_form_data({"description"=>"Vista 2015 Payment Link - Supported by Instamojo","base_price"=>user.cart.final_amount,"currency"=>"INR","title"=>"Shop At Vista","redirect_url"=>"http://iimb-vista.com/shop_at_vista/payment_complete","webhook_url"=>"http://iimb-vista.com/shop_at_vista/payment_success/"})
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl=true
     resp=http.request(req)

@@ -9,7 +9,11 @@ class Cart < ActiveRecord::Base
 		order=Order.new
 		order.user_id=user_id
 		if items.present?
+			number_of_items=items.count
+			offer=(200*(number_of_items/3))
+			offer+=(number_of_items%3==2 ? 100 : 0 )
 			total_amount=items.collect(&:price).inject(:+)
+			total_amount_with_offer=total_amount-offer
 		else
 			total_amount=0
 		end
@@ -26,5 +30,21 @@ class Cart < ActiveRecord::Base
 			order_item.save!
 		end
 		order
+	end
+
+	def offer_amount
+		if items.present?
+			number_of_items=items.count
+			offer=(200*(number_of_items/3))
+			offer+=(number_of_items%3==2 ? 100 : 0 )
+		else
+			offer=0
+		end
+		offer
+	end
+
+	def final_amount
+		final_amount = items.collect(&:price).inject(:+).round(2)-offer_amount
+		final_amount>0 ? final_amount : 0
 	end
 end
