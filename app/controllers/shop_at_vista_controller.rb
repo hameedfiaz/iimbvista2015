@@ -47,6 +47,7 @@ class ShopAtVistaController < ApplicationController
     if user_signed_in? && current_user.cart.items.present?
       resp=instamojo_login
       resp=instamojo_create_payment_link
+      instamojo_schedule_inactivation(JSON.parse(resp.read_body)["link"])
       redirect_to JSON.parse(resp.read_body)["link"]["url"]+current_user.data_for_instamojo
     else
       redirect_to root_path
@@ -55,12 +56,11 @@ class ShopAtVistaController < ApplicationController
 
   def payment_success
     @pars=params
-    order=Order.new
-    order.user=user=User.find_by_email(@pars["buyer"])
+    user=User.find_by_email(@pars["buyer"])
+    order=user.cart.to_order
     order.total_amount=@pars["amount"]
     order.order_id=@pars["payment_id"]
     offer_slug=@pars["offer_slug"]
-    order.cart_amount=user.cart.items.collect(&:price).inject(:+).round(2)
     order.save!
     url = URI.parse("https://www.instamojo.com/api/1.1/links/#{offer_slug}/")
     req = Net::HTTP::Delete.new(url.path)
@@ -99,6 +99,11 @@ class ShopAtVistaController < ApplicationController
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl=true
     resp=http.request(req)
+  end
+
+  def instamojo_schedule_inactivation(new_link_resp)
+    user=current_user
+    user.delay(run_at: 1.minutes.from_now).inactivate_payment_link(new_link_resp["slug"])
   end
 
 end

@@ -13,7 +13,7 @@ class Cart < ActiveRecord::Base
 		else
 			total_amount=0
 		end
-		order.total_amount=total_amount
+		order.cart_amount=total_amount
 		order.save!
 		item_groups = items.group_by(&:id)
 		item_groups.each do |k,v|

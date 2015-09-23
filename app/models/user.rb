@@ -55,4 +55,14 @@ class User < ActiveRecord::Base
   def data_for_instamojo
     "?data_name=#{full_name}&data_email=#{email}&data_phone=#{phone}&data_readonly=data_name&data_readonly=data_email&data_readonly=data_phone"
   end
+
+  def inactivate_payment_link(slug)
+    url = URI.parse("https://www.instamojo.com/api/1.1/links/#{slug}/")
+    req = Net::HTTP::Delete.new(url.path)
+    req.add_field("X-Api-Key", IMJ_CONFIG["api_key"])
+    req.add_field("X-Auth-Token", IMJ_CONFIG["api_token"])
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl=true
+    resp=http.request(req)
+  end
 end
