@@ -41,17 +41,15 @@ namespace :bulk_mailer do
 
 	end
 
-	task :send_to_list_in_csv, [:start_row, :end_row] => :environment do |task,args|
+	task :send_to_list_in_csv => :environment do |task,args|
 		begin
-			filename="#{Rails.root}/lib/tasks/email_list.csv"
+			filename="#{Rails.root}/lib/tasks/yls_email_list.csv"
 	  		if File.exist?(filename)
 	  			CSV.foreach(filename, :headers => true) do |row|
-	  				if row.present?
-	  					if (($.)>args.start_row.to_i && ($.)<=args.end_row.to_i)
-		  					puts "Sending mail to #{row[1]}"
-		  					MyMailer.delay.launch_mailer_third(row[1])
+	  				if row[4].present?
+		  					puts "Sending mail to #{row[4]}"
+		  					MyMailer.delay.launch_mailer_second(row[4])
 							puts "Queued mail sending *******************#{$.}"
-						end
 	  				end
 	       		end
 	     	else
