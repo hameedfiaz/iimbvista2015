@@ -75,6 +75,7 @@ class ShopAtVistaController < ApplicationController
   def payment_complete
     @payment_id=params["payment_id"]
     @status=params["status"]
+    @order=Order.find_by_order_id(@payment_id)
   end
 
   private
