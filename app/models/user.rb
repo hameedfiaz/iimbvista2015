@@ -48,6 +48,10 @@ class User < ActiveRecord::Base
     roles.include?(Role.find_by_name("BulletinAdmin"))
   end
 
+  def is_vendor?
+    roles.include?(Role.find_by_name("Vendor"))
+  end
+
   def category
     
   end

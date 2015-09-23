@@ -1,4 +1,8 @@
 Iimbvista2015::Application.routes.draw do
+  resources :items
+
+  resources :products
+
   resources :schedule_items
 
   get "shop_at_vista/index"
