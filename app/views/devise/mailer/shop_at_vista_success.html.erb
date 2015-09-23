@@ -1,0 +1,86 @@
+<div align="center">
+<table class="x_MsoNormalTable" style="width:707.15pt" cellpadding="0" cellspacing="0" border="0" width="943">
+<tbody>
+<tr style="height:123.35pt">
+<td colspan="5" style="width:707.15pt; border:solid windowtext 1.0pt; border-bottom:none; padding:0cm 0cm 0cm 0cm; height:123.35pt" valign="top" width="943">
+<p style="text-align:center" align="center"><span style="font-size:11.0pt; font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D"><%= image_tag attachments['header.png'].url -%></span></p>
+</td>
+</tr>
+<tr style="height:21.15pt">
+<td style="width:30.65pt; border:none; border-left:solid windowtext 1.0pt; padding:0cm 0cm 0cm 0cm; height:21.15pt" width="41">
+<p><span style="font-size:9.0pt; font-family:&quot;Arial&quot;,&quot;sans-serif&quot;; color:#333333">&nbsp;</span></p>
+</td>
+<td colspan="3" style="width:655.55pt; padding:0cm 0cm 0cm 0cm; height:21.15pt" width="874">
+<p style="background:white"><span style="font-size:11.0pt; font-family:&quot;Cambria&quot;,&quot;serif&quot;">Dear <% @user.full_name %></span></p>
+<p style="background:white"><span style="font-size:11.0pt; font-family:&quot;Cambria&quot;,&quot;serif&quot;">Thank you for Shopping at Vista '15</span></p>
+<p style="background:white"><span style="font-size:11.0pt; font-family:&quot;Cambria&quot;,&quot;serif&quot;"></span></p>
+<p style="background:white"><span style="font-size:11.0pt; font-family:&quot;Cambria&quot;,&quot;serif&quot;">Total Amount Charged : <%= @order.total_amount %></span></p>
+<p style="background:white"><span style="font-size:11.0pt; font-family:&quot;Cambria&quot;,&quot;serif&quot;"></span></p>
+
+<div align="center">
+<table class="x_x_MsoNormalTable" style="width:81.42%; background:white; border-collapse:collapse" cellpadding="0" cellspacing="0" border="0" width="81%">
+<tbody>
+<tr>
+<td style="width:130.8pt; border:solid windowtext 1.0pt; background:#FABF8F; padding:5.45pt 5.45pt 5.45pt 5.45pt" valign="top" width="174">
+<p style="text-align:center; line-height:13.6pt" align="center"><strong><span style="font-size:10.0pt; font-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;; color:#4A442A">Sl.no</span></strong></p>
+</td>
+<td style="width:271.3pt; border:solid windowtext 1.0pt; border-left:none; background:#FABF8F; padding:5.45pt 5.45pt 5.45pt 5.45pt" valign="top" width="362">
+<p style="line-height:13.6pt"><strong><span style="font-size:10.0pt; font-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;; color:#4A442A">Item</span></strong></p>
+</td>
+<td style="width:131.0pt; border:solid windowtext 1.0pt; border-left:none; background:#FABF8F; padding:0cm 0cm 0cm 0cm" valign="top" width="175">
+<p style="text-align:center; line-height:13.6pt" align="center"><strong><span style="font-size:10.0pt; font-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;; color:#4A442A">Quantity</span></strong></p>
+</td>
+</tr>
+<% @order.order_items.each_with_index do |order_item,i| %>
+<tr>
+<td style="width:130.8pt; border:solid windowtext 1.0pt; border-top:none; padding:5.45pt 5.45pt 5.45pt 5.45pt" valign="top" width="174">
+<p style="line-height:13.6pt"><b><u><span style="font-size:11.0pt; color:red"><%= i+1 %></span></u></b></p>
+</td>
+<td style="width:271.3pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:5.45pt 5.45pt 5.45pt 5.45pt" valign="top" width="362">
+<p style="line-height:13.6pt"><span style="font-size:11.0pt"><%= Item.find_by_id(order_item.item_id).product.description %> - <%= Item.find_by_id(order_item.item_id).item_desc %></span></p>
+</td>
+<td style="width:131.0pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 0cm 0cm 0cm" valign="top" width="175">
+<p style="text-align:center; line-height:13.6pt" align="center"><span style="font-size:11.0pt"><%= order_item.quantity %></span></p>
+</td>
+</tr>
+<% end %>
+</tbody>
+</table>
+</div>
+<p style="background:white"><span></span><span style="font-size:11.0pt; font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Please visit and Like</span><span style="font-size:11.0pt; font-family:&quot;Cambria&quot;,&quot;serif&quot;"> :<span style="color:red"><a href="https://www.facebook.com/iimbvista" target="_blank" id="LPlnk695449"><span style="color:red">https://www.facebook.com/iimbvista</span></a></span></span></p><p style="background:white"><span style="font-size:11.0pt; font-family:&quot;Cambria&quot;,&quot;serif&quot;; color:black">Best Regards,</span></p>
+<p style="background:white"><i><span style="font-size:11.0pt; font-family:&quot;Cambria&quot;,&quot;serif&quot;; color:black">Team Vista ’15</span></i></p>
+<p style="text-align:justify"><span style="font-size:11.0pt; font-family:&quot;Cambria&quot;,&quot;serif&quot;; color:black">IIM Bangalore</span></p>
+<p><span style="font-size:11.0pt; font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+<p style="text-align:right" align="right"><span style="font-size:6.0pt; font-family:&quot;Cambria&quot;,&quot;serif&quot;; color:black">&nbsp;</span></p>
+</td>
+<td style="width:20.95pt; border:none; border-right:solid windowtext 1.0pt; padding:0cm 0cm 0cm 0cm; height:21.15pt" width="28">
+<p><i><span style="font-size:9.0pt; font-family:&quot;Arial&quot;,&quot;sans-serif&quot;; color:#333333">&nbsp;</span></i></p>
+<p><i><span style="font-size:9.0pt; font-family:&quot;Arial&quot;,&quot;sans-serif&quot;; color:#333333">&nbsp;</span></i></p>
+</td>
+</tr>
+<tr style="height:18.15pt">
+<td colspan="5" style="width:707.15pt; background:#00B0F0; padding:0cm 0cm 0cm 0cm; height:18.15pt" width="943">
+</td>
+</tr>
+<tr style="height:27.3pt">
+<td colspan="5" style="width:707.15pt; padding:0cm 0cm 0cm 0cm; height:27.3pt" valign="top" width="943">
+<p style="text-align:center" align="center"><span style="font-size:6.5pt; font-family:&quot;Arial&quot;,&quot;sans-serif&quot;; color:#595959"><br>
+</span><span style="font-size:7.5pt; font-family:&quot;Arial&quot;,&quot;sans-serif&quot;; color:#595959">&nbsp;&nbsp;&nbsp;© Copyright 201</span><span style="font-size:7.5pt; font-family:&quot;Arial&quot;,&quot;sans-serif&quot;; color:#1F497D">5</span><span style="font-size:7.5pt; font-family:&quot;Arial&quot;,&quot;sans-serif&quot;; color:#595959"> Vista - </span><span style="font-size:11.0pt; font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><a href="http://spidi2.iimb.ernet.in/~fii" target="_blank"><span style="font-size:7.5pt; font-family:&quot;Arial&quot;,&quot;sans-serif&quot;; color:#595959; text-decoration:none">Forum for Industrial Interaction</span></a></span><span style="font-size:7.5pt; font-family:&quot;Arial&quot;,&quot;sans-serif&quot;; color:#595959">, IIM Bangalore. All rights reserved.</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="width:125.35pt; padding:0cm 0cm 0cm 0cm" width="167"></td>
+<td style="width:6.35pt; padding:0cm 0cm 0cm 0cm" width="8"></td>
+<td style="width:362.65pt; padding:0cm 0cm 0cm 0cm" width="484"></td>
+<td style="width:20.95pt; padding:0cm 0cm 0cm 0cm" width="28"></td>
+</tr>
+<tr height="0">
+<td style="border:none" width="41"></td>
+<td style="border:none" width="126"></td>
+<td style="border:none" width="8"></td>
+<td style="border:none" width="739"></td>
+<td style="border:none" width="28"></td>
+</tr>
+</tbody>
+</table>
+</div>

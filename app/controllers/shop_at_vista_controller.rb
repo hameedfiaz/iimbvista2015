@@ -70,6 +70,7 @@ class ShopAtVistaController < ApplicationController
     http.use_ssl=true
     resp=http.request(req)
     user.cart.destroy
+    MyMailer.shop_at_vista_success(user,order).deliver
   end
 
   def payment_complete

@@ -5,7 +5,7 @@
 			<% if @status="success" && @order %>
 				<h2><p>Thank you for shopping at Vista '15</p>
 				<p>Your payment ID which will be used for reference is : <strong><%= @payment_id %></strong><br/>Please save this for future reference.</p>
-				<p><strong>Total Amount charged: @order.total_amount</strong></p>
+				<p><strong>Total Amount charged: <%= @order.total_amount %></strong></p>
 
 				<p><a href="/shop_at_vista/index">Continue Shopping at Vista 2015</a></p></h2>
 			<% else %>

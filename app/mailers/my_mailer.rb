@@ -18,6 +18,13 @@ class MyMailer < Devise::Mailer
   	mail(:from => "vista@iimb.ernet.in", :to => user.email, :subject => "Welcome 2 Vista2015 ! ")
   end
 
+  def shop_at_vista_success(user,order)
+    @order=order
+    @user=user
+    attachments.inline['header.png'] = File.read("#{Rails.root}/app/assets/images/img/mail_header.png")
+    mail(:from => "vista@iimb.ernet.in", :to => user.email, :subject => "Thank you for Shopping at Vista 2015 ! ")
+  end
+
   def event_registration_mail(user,team,event)
     @user=user
     @team_name=team.name
