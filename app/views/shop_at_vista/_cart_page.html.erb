@@ -3,7 +3,7 @@
 		<strong>My Cart ( Rs.<%= @cart.items.empty? ? "0.00" : @cart.items.collect(&:price).inject(:+).round(2) %> )</strong><br/></br/><br/>
 		<% @cart.items.group_by(&:id).each do |k,v| %>
 		 <div class="pull-left">
-		 <%= v.first.product.name %><br/>
+		 <%= v.first.product.name %> - <%= v.first.item_desc %><br/>
 		 <%= link_to_function "Remove","removeFromCart(#{v.first.id},#{current_user.id})" %>
 		 </div>
 		 <div class="pull-right">

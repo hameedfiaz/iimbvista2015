@@ -37,7 +37,7 @@
 <p style="line-height:13.6pt"><b><u><span style="font-size:11.0pt; color:red"><%= i+1 %></span></u></b></p>
 </td>
 <td style="width:271.3pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:5.45pt 5.45pt 5.45pt 5.45pt" valign="top" width="362">
-<p style="line-height:13.6pt"><span style="font-size:11.0pt"><%= Item.find_by_id(order_item.item_id).product.description %> - <%= Item.find_by_id(order_item.item_id).item_desc %></span></p>
+<p style="line-height:13.6pt"><span style="font-size:11.0pt"><%= Item.find_by_id(order_item.item_id).product.name %> - <%= Item.find_by_id(order_item.item_id).item_desc %></span></p>
 </td>
 <td style="width:131.0pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 0cm 0cm 0cm" valign="top" width="175">
 <p style="text-align:center; line-height:13.6pt" align="center"><span style="font-size:11.0pt"><%= order_item.quantity %></span></p>
