@@ -6,6 +6,7 @@
     <th>Product</th>
     <th>Price</th>
     <th>Item desc</th>
+    <th>Available</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +18,7 @@
     <td><%= item.product.name %></td>
     <td><%= item.price %></td>
     <td><%= item.item_desc %></td>
+    <td><%= item.available %></td>
     <td><%= link_to 'Show', item %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
     <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>

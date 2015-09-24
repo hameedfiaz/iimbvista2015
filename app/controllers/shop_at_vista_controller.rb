@@ -19,7 +19,11 @@ class ShopAtVistaController < ApplicationController
 	  	user_id=params[:cid]
 	  	@item=Item.find_by_id(item_id)
 	  	@cart=Cart.find_or_create_by_user_id(user_id)
-	  	@cart.items<<@item
+      if (@cart.items.select{|it| it.id==@item.id}.count+1)<=@item.available
+	  	  @cart.items<<@item
+      else 
+        render :text=>"Oops !!! Stocks are empty. Why dont you try a different size or design !" and return
+      end
 	rescue Exception => e
 		render :text=>"Something went wrong...", :status=>503 and return
 	end

@@ -28,6 +28,8 @@ class Cart < ActiveRecord::Base
 			order_item.item_id=item.id
 			order_item.quantity=quantity
 			order_item.save!
+			item.available-=quantity
+			item.save!
 		end
 		order
 	end
