@@ -1,9 +1,11 @@
 <div class="well">
 	<div class="panel-heading"><h1>Shop @ Vista '15</h1></div>
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-12">
 			<%= image_tag "#{@product.avatar.url}" %>
 		</div>
+	</div>
+	<div class="row">
 		<div class="col-md-8">
 			<h2><%= @product.name %></h2>
 			<p><%= @product.description.html_safe %></p>
