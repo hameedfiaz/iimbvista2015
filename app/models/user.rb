@@ -57,7 +57,7 @@ class User < ActiveRecord::Base
   end
 
   def data_for_instamojo
-    "?data_name=#{full_name}&data_email=#{email}&data_phone=#{phone}&data_readonly=data_email&data_readonly=data_phone"
+    "?data_name=#{full_name}&data_email=#{email}&data_phone=#{phone}&data_readonly=data_email"
   end
 
   def inactivate_payment_link(slug)
