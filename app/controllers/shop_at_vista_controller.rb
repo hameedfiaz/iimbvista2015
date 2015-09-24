@@ -79,6 +79,14 @@ class ShopAtVistaController < ApplicationController
     @order=Order.find_by_order_id(@payment_id)
   end
 
+  def save_address
+    order_id=params["order_id"]
+    order=Order.find_by_order_id(order_id)
+    address=params["address"]
+    order.address=address
+    order.save!
+  end
+
   private
 
   def instamojo_login

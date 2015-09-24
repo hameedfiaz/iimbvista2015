@@ -7,7 +7,14 @@
 				<p>Your payment ID which will be used for reference is : <strong><%= @payment_id %></strong><br/>Please save this for future reference.</p>
 				<p><strong>Total Amount charged: <%= @order.total_amount %></strong></p>
 
-				<p><a href="/shop_at_vista/index">Continue Shopping at Vista 2015</a></p></h2>
+
+				<form action="/shop_at_vista/save_address" method="get">
+					<span style="font-size: large;">Please save your shipping address</span><br/>
+			    	<textarea id="address" name="address" style="font-size: small;" cols=40 rows=5></textarea><br/>
+			    	<%= hidden_field_tag :order_id, @order.order_id %>
+			    	<%= submit_tag "Save Shipping Address", :style=>"font-size: small;" %>
+				</form>
+					
 			<% else %>
 			<% end %>
 		</div>
