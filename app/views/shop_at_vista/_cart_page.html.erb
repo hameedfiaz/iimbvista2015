@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <div class="well">
 	<% if @cart && @cart.items %>
 		<strong>My Cart ( Rs.<%= @cart.items.empty? ? "0.00" : @cart.items.collect(&:price).inject(:+).round(2) %> )</strong><br/></br/><br/>
@@ -44,3 +45,4 @@ $.ajax({
 });
 }
 </script>
+<% end %>

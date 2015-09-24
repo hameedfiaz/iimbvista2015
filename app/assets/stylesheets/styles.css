@@ -586,6 +586,11 @@ Navigation
 .navicon p {
     margin: 1px 50px 0 0
 }
+.shop_at_vista_fixed {
+    position: fixed;
+    top: 10%;
+    right: 8%;
+}
 .navicon-fixed {
     position: fixed;
     top: 10%;

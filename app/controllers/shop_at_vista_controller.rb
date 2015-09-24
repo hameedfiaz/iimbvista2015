@@ -2,8 +2,10 @@ class ShopAtVistaController < ApplicationController
 	layout "shopatvista"
 
   def index
-    @cart=Cart.find_or_create_by_user_id(current_user.id)
-  	@products=Product.all
+    if user_signed_in? 
+      @cart=Cart.find_or_create_by_user_id(current_user.id)
+  	  @products=Product.all
+    end
   end
 
   def product_info
