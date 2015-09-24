@@ -13,7 +13,7 @@
 	<div id="grid" class="shuffle--images row-fluid images-loaded shuffle">
 	<% @products.each do |product| %>
 		<% if product %>
-		<div class="item col-md-3" <%= "data-title='#{product.name}'" %> <%= "data-groups=['#{product.id}']" %>>
+		<div class="item col-md-6" <%= "data-title='#{product.name}'" %> <%= "data-groups=['#{product.id}']" %>>
 			<a <%= "href='/shop_at_vista/product_info/#{product.id}'" %>><img class="pic-title" <%= "title='#{product.id}'" %> <%= "src='#{product.avatar}'" %> style="max-width:100%;max-height:100%;height:150px;" /></a>
 		</div>
 		<% end %>
