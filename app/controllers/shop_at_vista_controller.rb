@@ -25,6 +25,7 @@ class ShopAtVistaController < ApplicationController
         render :text=>"Oops !!! Stocks are empty. Why dont you try a different size or design !" and return
       end
 	rescue Exception => e
+    Rails.logger.info e.message
 		render :text=>"Something went wrong...", :status=>503 and return
 	end
 	render :text=>"Added to cart successfully" and return
@@ -42,6 +43,7 @@ class ShopAtVistaController < ApplicationController
         render :text=>"Item not available in your cart. Please refresh the page and try again", :status=>503 and return    
       end
   rescue Exception => e
+    Rails.logger.info e.message
     render :text=>"Something went wrong...", :status=>503 and return
   end
   render :text=>"Removed from cart successfully" and return
