@@ -53,4 +53,10 @@ class MyMailer < Devise::Mailer
     attachments.inline['header.png'] = File.read("#{Rails.root}/app/assets/images/img/mail_header.png")
     mail(:from => "vista@iimb.ernet.in", :to => email, :subject => "IIM Bangalore's VISTA| IIM B Annual Business Summit | 24th to 27th September 2015")
   end
+
+  def feedback_mailer(email)
+    attachments.inline['header.png'] = File.read("#{Rails.root}/app/assets/images/img/mail_header.png")
+    mail(:from => "vista@iimb.ernet.in", :to => email, :subject => "Vista '15 Feedback | Thank You")
+  end
+
 end

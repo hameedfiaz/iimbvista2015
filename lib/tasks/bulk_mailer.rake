@@ -28,7 +28,7 @@ namespace :bulk_mailer do
 				# CSV.foreach(filename, :headers => false) do |row|
 					users.each_with_index do |email_id,ind|
 						puts "Sending mail to #{email_id}"
-						MyMailer.delay.launch_mailer_second(email_id)
+						MyMailer.delay.feedback_mailer(email_id)
 						puts "Queued mail sending *******************#{ind}"
 					end
 				# end
@@ -59,4 +59,25 @@ namespace :bulk_mailer do
 			puts e.message
 		end
 	end
+
+	task :send_feedback_mail => :environment do
+		begin 
+			filename="#{Rails.root}/lib/tasks/feedback_file.csv"
+			if File.exist?(filename)
+				CSV.foreach(filename, :headers => false) do |row|
+					row.each_with_index do |email_id,ind|
+						puts "Sending mail to #{email_id}"
+						MyMailer.delay.feedback_mailer(email_id)
+						puts "Queued mail sending *******************#{ind}"
+					end
+				end
+			else
+				puts "Email List not found at /lib/feedback_file.csv"
+			end
+		rescue Exception => ex
+			puts ex.message
+		end
+
+	end
+
 end
