@@ -80,4 +80,26 @@ namespace :bulk_mailer do
 
 	end
 
+	task :send_certificate_mail => :environment do
+		begin 
+			filename="#{Rails.root}/lib/tasks/yls_email_list.csv"
+			if File.exist?(filename)
+				i=0
+				CSV.foreach(filename, :headers => false) do |row|
+					row.each_with_index do |email_id,ind|
+						i=i+1
+						puts "Sending mail to #{email_id}"
+						MyMailer.delay.certi_mailer(email_id,i)
+						puts "Queued mail sending *******************#{ind}"
+					end
+				end
+			else
+				puts "Email List not found at /lib/feedback_file.csv"
+			end
+		rescue Exception => ex
+			puts ex.message
+		end
+
+	end
+
 end

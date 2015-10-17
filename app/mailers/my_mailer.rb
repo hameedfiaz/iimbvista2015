@@ -59,4 +59,10 @@ class MyMailer < Devise::Mailer
     mail(:from => "vista@iimb.ernet.in", :to => email, :subject => "Vista '15 Feedback | Thank You")
   end
 
+  def certi_mailer(email,i)
+    attachments.inline['header.png'] = File.read("#{Rails.root}/app/assets/images/img/mail_header.png")
+    attachments["YLS_Certificate.pdf"] = File.read("#{Rails.root}/lib/tasks/certificates/Certificate of Achievement.#{i.to_s}.pdf")
+    mail(:from => "vista@iimb.ernet.in", :to => email, :subject => "IIM Bangalore's Vista: Young Leaders Summit Certificates")
+  end
+
 end
