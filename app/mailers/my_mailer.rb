@@ -55,8 +55,14 @@ class MyMailer < Devise::Mailer
   end
 
   def feedback_mailer(email)
-    attachments.inline['header.png'] = File.read("#{Rails.root}/app/assets/images/img/mail_header.png")
-    mail(:from => "vista@iimb.ernet.in", :to => email, :subject => "Vista '15 Feedback | Thank You")
+    attachments.inline['iimb_mailer.jpg'] = File.read("#{Rails.root}/app/assets/images/img/iimb_mailer.jpg")
+    attachments.inline['fii_mailer.jpg'] = File.read("#{Rails.root}/app/assets/images/img/fii_mailer.jpg")
+    attachments.inline['speaker1.jpg'] = File.read("#{Rails.root}/app/assets/images/img/speaker1.jpg")
+    attachments.inline['speaker2.jpg'] = File.read("#{Rails.root}/app/assets/images/img/speaker2.jpg")
+    attachments.inline['speaker3.jpg'] = File.read("#{Rails.root}/app/assets/images/img/speaker3.jpg")
+    attachments.inline['speaker4.jpg'] = File.read("#{Rails.root}/app/assets/images/img/speaker4.jpg")
+    attachments.inline['speaker5.jpg'] = File.read("#{Rails.root}/app/assets/images/img/speaker5.jpg")
+    mail(:from => "colloquium@iimb.ernet.in", :to => email, :subject => "IIM Bangalore | Colloquium Unleashed | 5 speakers, 5 inspirational talks!")
   end
 
   def certi_mailer(email,i)
